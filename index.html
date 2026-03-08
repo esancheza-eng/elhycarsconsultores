@@ -457,6 +457,7 @@ nav {
   position: absolute; left: -150px; bottom: -150px;
   width: 500px; height: 500px;
   background: radial-gradient(circle, rgba(46,107,230,0.12) 0%, transparent 70%);
+  z-index: 0; pointer-events: none;
 }
 
 .contact-inner {
@@ -495,6 +496,7 @@ nav {
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 16px;
   padding: 2.5rem;
+  position: relative; z-index: 1;
 }
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -1153,9 +1155,15 @@ footer {
           <input id="f-correo" type="email" placeholder="tu@empresa.com">
         </div>
       </div>
-      <div class="form-group">
-        <label>Empresa</label>
-        <input id="f-empresa" type="text" placeholder="Nombre de tu empresa">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input id="f-telefono" type="tel" placeholder="+593 99 000 0000">
+        </div>
+        <div class="form-group">
+          <label>Empresa / Emprendimiento</label>
+          <input id="f-empresa" type="text" placeholder="Nombre de tu empresa o emprendimiento">
+        </div>
       </div>
       <div class="form-group">
         <label>Mensaje</label>
@@ -1177,13 +1185,13 @@ footer {
       <a href="https://www.linkedin.com/in/esancheza" target="_blank" class="social-link" title="LinkedIn">in</a>
       <a href="https://www.youtube.com/@elhychristiansanchezarreag5811" target="_blank" class="social-link" title="YouTube">▶</a>
       <a href="https://wa.me/593989938910" target="_blank" class="social-link" title="WhatsApp">💬</a>
-      <a href="mailto:elhycars2025@gmail.com" class="social-link" title="Email">✉️</a>
+      <a href="/cdn-cgi/l/email-protection#7f1a1317061c1e0d0c4d4f4d4a3f18121e1613511c1012" class="social-link" title="Email">✉️</a>
     </div>
   </div>
   <div class="footer-copy">© 2025 Elhycar's Consultores & Educación Digital. Todos los derechos reservados.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
 }
@@ -1210,6 +1218,7 @@ function handleForm() {
   const btn = document.querySelector('.form-btn');
   const nombre = document.getElementById('f-nombre').value.trim();
   const correo = document.getElementById('f-correo').value.trim();
+  const telefono = document.getElementById('f-telefono').value.trim();
   const empresa = document.getElementById('f-empresa').value.trim();
   const mensaje = document.getElementById('f-mensaje').value.trim();
 
@@ -1243,6 +1252,7 @@ function handleForm() {
     btn.style.background = '';
     document.getElementById('f-nombre').value = '';
     document.getElementById('f-correo').value = '';
+    document.getElementById('f-telefono').value = '';
     document.getElementById('f-empresa').value = '';
     document.getElementById('f-mensaje').value = '';
   }, 800);
@@ -1345,6 +1355,3 @@ window.addEventListener('scroll', () => {
     <button class="cart-close" onclick="closeCart()">×</button>
   </div>
   <div class="cart-items" id="cartItems">
-    <div class="cart-empty">
-      <span class="cart-empty-icon">🛒</span>
-      Aún no has agregado servicios.<br>Explora y selecciona los que necesi
