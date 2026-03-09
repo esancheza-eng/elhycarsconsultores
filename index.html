@@ -34,11 +34,65 @@ nav { position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex
 .nav-links a:hover { color:var(--gold-light); }
 .nav-cta { background:var(--accent)!important;color:white!important;padding:0.42rem 1.1rem;border-radius:4px;transition:background 0.2s!important; }
 .nav-cta:hover { background:var(--accent-light)!important; }
-.hamburger { display:none;flex-direction:column;gap:5px;cursor:pointer; }
-.hamburger span { display:block;width:24px;height:2px;background:white; }
-.mobile-menu { display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--navy);padding:1rem 5%;border-bottom:1px solid rgba(29,95,196,0.15); }
-.mobile-menu.open { display:flex; }
-.mobile-menu a { color:rgba(255,255,255,0.8);text-decoration:none;padding:0.75rem 0;font-size:0.95rem;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.05); }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 12px;
+  margin-right: -12px;
+  border-radius: 8px;
+  background: rgba(29,95,196,0.15);
+  border: 1px solid rgba(29,95,196,0.3);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  z-index: 9998;
+  background: #0a1628;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid rgba(29,95,196,0.4);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 6%;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.2s, color 0.2s;
+}
+.mobile-menu a:hover, .mobile-menu a:active {
+  background: rgba(29,95,196,0.2);
+  color: #e0b85a;
+}
+.mobile-menu a:last-child {
+  border-bottom: none;
+  background: rgba(29,95,196,0.15);
+  color: #e0b85a;
+  font-weight: 700;
+  margin: 0.5rem 5%;
+  border-radius: 8px;
+  justify-content: center;
+}
 
 /* HERO */
 .hero { min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:68px 5% 0;position:relative;overflow:hidden; }
@@ -319,14 +373,16 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
     <li><a href="#consultant">Consultor</a></li>
     <li><a href="#contact" class="nav-cta">Diagnóstico</a></li>
   </ul>
-  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  <div class="hamburger" id="hamburgerBtn">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="toggleMenu()">Nosotros</a>
-  <a href="#services" onclick="toggleMenu()">Servicios</a>
-  <a href="#methodology" onclick="toggleMenu()">Metodología</a>
-  <a href="#consultant" onclick="toggleMenu()">Consultor</a>
-  <a href="#contact" onclick="toggleMenu()">Diagnóstico Gratuito</a>
+  <a href="#about" class="menu-link">Nosotros</a>
+  <a href="#services" class="menu-link">Servicios</a>
+  <a href="#methodology" class="menu-link">Metodología</a>
+  <a href="#consultant" class="menu-link">Consultor</a>
+  <a href="#contact" class="menu-link">Diagnóstico Gratuito</a>
 </div>
 
 <!-- HERO -->
@@ -586,7 +642,7 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
         <div class="contact-detail-icon">✉️</div>
         <div class="contact-detail-text">
           <small>Correo corporativo</small>
-          <a href="mailto:elhycars2025@gmail.com">elhycars2025@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#0f6a6367766c6e7d7c3d3f3d3a4f68626e6663216c6062"><span class="__cf_email__" data-cfemail="6d080105140e0c1f1e5f5d5f582d0a000c0401430e0200">[email&#160;protected]</span></a>
         </div>
       </div>
       <div class="contact-detail">
@@ -635,14 +691,140 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
       <a href="https://www.linkedin.com/in/esancheza" target="_blank" class="social-link" title="LinkedIn">in</a>
       <a href="https://www.youtube.com/@elhychristiansanchezarreag5811" target="_blank" class="social-link" title="YouTube">▶</a>
       <a href="https://wa.me/593989938910" target="_blank" class="social-link" title="WhatsApp">💬</a>
-      <a href="mailto:elhycars2025@gmail.com" class="social-link" title="Email">✉️</a>
+      <a href="/cdn-cgi/l/email-protection#bdd8d1d5c4dedccfce8f8d8f88fddad0dcd4d193ded2d0" class="social-link" title="Email">✉️</a>
     </div>
   </div>
   <div class="footer-copy">© 2025 Elhycar's Consultores & Educación Digital · Todos los derechos reservados · Milagro, Ecuador</div>
 </footer>
 
-<script>
-function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('open'); }
+<!-- WHATSAPP FLOATING BUTTON -->
+<style>
+.wa-float {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+.wa-float-bubble {
+  background: white;
+  color: #111;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 20px 20px 4px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(8px) scale(0.95);
+  animation: waBubbleIn 0.5s 1.5s forwards;
+  pointer-events: none;
+}
+
+@keyframes waBubbleIn {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.wa-float-btn {
+  width: 60px;
+  height: 60px;
+  background: #22c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(34,197,94,0.5);
+  transition: transform 0.25s, box-shadow 0.25s;
+  animation: waBtnIn 0.5s 1s forwards;
+  opacity: 0;
+  position: relative;
+}
+
+@keyframes waBtnIn {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.wa-float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 35px rgba(34,197,94,0.65);
+}
+
+/* Ripple ping effect */
+.wa-float-btn::before,
+.wa-float-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #22c55e;
+  opacity: 0.4;
+  animation: waPing 2.5s ease-out infinite;
+}
+.wa-float-btn::after {
+  animation-delay: 1.25s;
+}
+
+@keyframes waPing {
+  0%   { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+.wa-float-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+  position: relative;
+  z-index: 1;
+}
+</style>
+
+<div class="wa-float">
+  <div class="wa-float-bubble">💬 Chatea con nosotros</div>
+  <a class="wa-float-btn" href="https://wa.me/593989938910?text=Hola%20Christian%2C%20me%20contacto%20desde%20su%20sitio%20web.%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" title="Chatea con nosotros por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Hamburger menu - robust for mobile
+var hamburgerBtn = document.getElementById('hamburgerBtn');
+var mobileMenu = document.getElementById('mobileMenu');
+
+function toggleMenu() {
+  mobileMenu.classList.toggle('open');
+}
+
+hamburgerBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  toggleMenu();
+});
+
+hamburgerBtn.addEventListener('touchend', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  toggleMenu();
+});
+
+document.querySelectorAll('.menu-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    mobileMenu.classList.remove('open');
+  });
+});
+
+document.addEventListener('click', function(e) {
+  if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+  }
+});
 window.addEventListener('scroll',()=>{ document.getElementById('mainNav').style.boxShadow=window.scrollY>60?'0 4px 30px rgba(0,0,0,0.35)':'none'; });
 
 const observer=new IntersectionObserver((entries)=>{
@@ -702,9 +884,4 @@ function updateOrderBar(){
 function sendOrderToWhatsApp(){
   if(selected.size===0)return;
   const list=[...selected].map(i=>`  • ${SERVICES[i].icon} ${SERVICES[i].name}`).join('\n');
-  const text=`Hola Christian, me contacto desde su sitio web y estoy interesado en los siguientes servicios de consultoría:\n\n${list}\n\nMe gustaría recibir una propuesta y cotización personalizada. ¡Gracias!`;
-  window.open('https://wa.me/593989938910?text='+encodeURIComponent(text),'_blank');
-}
-</script>
-</body>
-</html>
+  const text=`Hola Christian, me co
