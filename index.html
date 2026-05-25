@@ -934,3 +934,191 @@ window.addEventListener('scroll',()=>{ document.getElementById('mainNav').style.
 
 </body>
 </html>
+<!-- ASISTENTE VIRTUAL FLOTANTE — ElhyAi -->
+<style>
+#elhy-chat-fab{position:fixed;bottom:1.8rem;left:1.8rem;z-index:10000;display:flex;flex-direction:column;align-items:flex-start;gap:0.55rem;font-family:'Outfit',sans-serif;}
+#elhy-fab-btn{width:58px;height:58px;background:linear-gradient(135deg,#1d5fc4 0%,#0a2a5e 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;box-shadow:0 6px 24px rgba(29,95,196,0.5);transition:transform 0.25s,box-shadow 0.25s;position:relative;animation:elhyFabIn 0.5s 1s both;}
+@keyframes elhyFabIn{from{opacity:0;transform:scale(0.6);}to{opacity:1;transform:scale(1);}}
+#elhy-fab-btn:hover{transform:scale(1.1);box-shadow:0 10px 36px rgba(29,95,196,0.65);}
+#elhy-fab-btn::before,#elhy-fab-btn::after{content:'';position:absolute;inset:0;border-radius:50%;background:rgba(29,95,196,0.4);animation:elhyPing 2.8s ease-out infinite;}
+#elhy-fab-btn::after{animation-delay:1.4s;}
+@keyframes elhyPing{0%{transform:scale(1);opacity:0.4;}100%{transform:scale(2);opacity:0;}}
+#elhy-fab-icon{width:28px;height:28px;position:relative;z-index:1;}
+#elhy-online-dot{position:absolute;bottom:3px;right:3px;width:12px;height:12px;background:#22c55e;border-radius:50%;border:2.5px solid #0a1628;z-index:2;}
+#elhy-welcome-bubble{background:#0e1a30;border:1px solid rgba(29,95,196,0.4);color:rgba(255,255,255,0.88);font-size:0.8rem;font-weight:500;padding:0.5rem 0.95rem;border-radius:4px 18px 18px 18px;box-shadow:0 4px 20px rgba(0,0,0,0.3);white-space:nowrap;opacity:0;transform:translateY(6px) scale(0.95);animation:elhyBubbleIn 0.5s 1.8s forwards;pointer-events:none;max-width:220px;}
+@keyframes elhyBubbleIn{to{opacity:1;transform:translateY(0) scale(1);}}
+#elhy-chat-window{position:fixed;bottom:5.5rem;left:1.8rem;width:340px;max-width:calc(100vw - 2.4rem);background:#080f1e;border:1px solid rgba(29,95,196,0.35);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.6);display:none;flex-direction:column;overflow:hidden;z-index:10001;animation:elhyChatOpen 0.3s ease;}
+@keyframes elhyChatOpen{from{opacity:0;transform:translateY(12px) scale(0.97);}to{opacity:1;transform:none;}}
+#elhy-chat-header{background:linear-gradient(135deg,#0f2040 0%,#1d3a70 100%);padding:0.9rem 1.1rem;display:flex;align-items:center;gap:0.75rem;border-bottom:1px solid rgba(29,95,196,0.25);}
+#elhy-header-avatar{width:38px;height:38px;background:linear-gradient(135deg,#1d5fc4,#0a2a5e);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:white;flex-shrink:0;position:relative;border:1.5px solid rgba(64,128,232,0.5);}
+#elhy-header-dot{position:absolute;bottom:1px;right:1px;width:10px;height:10px;background:#22c55e;border-radius:50%;border:2px solid #0f2040;}
+#elhy-header-name{font-size:0.88rem;font-weight:700;color:white;line-height:1.2;}
+#elhy-header-status{font-size:0.7rem;color:#22c55e;font-weight:500;letter-spacing:0.05em;}
+#elhy-close-btn{margin-left:auto;background:rgba(255,255,255,0.07);border:none;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,0.6);font-size:1rem;transition:background 0.2s,color 0.2s;flex-shrink:0;}
+#elhy-close-btn:hover{background:rgba(255,255,255,0.14);color:white;}
+#elhy-messages{padding:1rem;display:flex;flex-direction:column;gap:0.65rem;overflow-y:auto;max-height:280px;min-height:180px;scroll-behavior:smooth;}
+#elhy-messages::-webkit-scrollbar{width:4px;}
+#elhy-messages::-webkit-scrollbar-track{background:transparent;}
+#elhy-messages::-webkit-scrollbar-thumb{background:rgba(29,95,196,0.4);border-radius:2px;}
+.elhy-msg{max-width:85%;font-size:0.81rem;line-height:1.55;padding:0.55rem 0.85rem;border-radius:12px;animation:elhyMsgIn 0.25s ease;}
+@keyframes elhyMsgIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+.elhy-msg.bot{background:rgba(29,95,196,0.15);border:1px solid rgba(29,95,196,0.25);color:rgba(255,255,255,0.85);align-self:flex-start;border-radius:4px 12px 12px 12px;}
+.elhy-msg.user{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.75);align-self:flex-end;border-radius:12px 4px 12px 12px;}
+#elhy-quick-btns{padding:0 1rem 0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;}
+.elhy-quick-btn{background:rgba(29,95,196,0.1);border:1px solid rgba(29,95,196,0.3);color:rgba(100,160,255,0.9);font-family:'Outfit',sans-serif;font-size:0.71rem;font-weight:600;padding:0.28rem 0.65rem;border-radius:100px;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+.elhy-quick-btn:hover{background:rgba(29,95,196,0.28);color:white;border-color:rgba(64,128,232,0.6);}
+#elhy-chat-footer{padding:0.7rem 1rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;gap:0.5rem;align-items:center;}
+#elhy-input{flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:0.5rem 0.9rem;color:white;font-family:'Outfit',sans-serif;font-size:0.81rem;outline:none;transition:border-color 0.2s;}
+#elhy-input::placeholder{color:rgba(255,255,255,0.25);}
+#elhy-input:focus{border-color:rgba(29,95,196,0.6);}
+#elhy-send-btn{width:34px;height:34px;background:#1d5fc4;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background 0.2s,transform 0.15s;}
+#elhy-send-btn:hover{background:#4080e8;transform:scale(1.08);}
+#elhy-send-btn svg{width:15px;height:15px;fill:white;}
+#elhy-wa-strip{padding:0.6rem 1rem 0.85rem;text-align:center;}
+#elhy-wa-link{display:inline-flex;align-items:center;gap:0.45rem;background:#16a34a;color:white;font-family:'Outfit',sans-serif;font-size:0.78rem;font-weight:700;padding:0.5rem 1.1rem;border-radius:100px;text-decoration:none;transition:background 0.2s,transform 0.15s;box-shadow:0 4px 14px rgba(34,197,94,0.3);}
+#elhy-wa-link:hover{background:#22c55e;transform:translateY(-1px);}
+#elhy-wa-link svg{width:15px;height:15px;fill:white;flex-shrink:0;}
+</style>
+
+<div id="elhy-chat-fab">
+  <div id="elhy-welcome-bubble">👋 ¡Hola! Soy tu asistente virtual</div>
+  <button id="elhy-fab-btn" aria-label="Abrir asistente virtual ElhyAi">
+    <svg id="elhy-fab-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="14" cy="14" r="12" fill="rgba(255,255,255,0.08)"/>
+      <path d="M7 10.5C7 9.12 8.12 8 9.5 8h9C19.88 8 21 9.12 21 10.5v5c0 1.38-1.12 2.5-2.5 2.5H16l-2 2.5-2-2.5H9.5C8.12 18 7 16.88 7 15.5v-5z" fill="white" opacity="0.9"/>
+      <circle cx="10.5" cy="13" r="1.2" fill="#0f2040"/>
+      <circle cx="14" cy="13" r="1.2" fill="#0f2040"/>
+      <circle cx="17.5" cy="13" r="1.2" fill="#0f2040"/>
+    </svg>
+    <div id="elhy-online-dot"></div>
+  </button>
+</div>
+
+<div id="elhy-chat-window" role="dialog" aria-label="Asistente virtual ElhyAi Consultores">
+  <div id="elhy-chat-header">
+    <div id="elhy-header-avatar">AI<div id="elhy-header-dot"></div></div>
+    <div id="elhy-header-info">
+      <div id="elhy-header-name">Asistente ElhyAi</div>
+      <div id="elhy-header-status">● En línea ahora</div>
+    </div>
+    <button id="elhy-close-btn" aria-label="Cerrar chat">✕</button>
+  </div>
+  <div id="elhy-messages"></div>
+  <div id="elhy-quick-btns">
+    <button class="elhy-quick-btn" onclick="elhyQuick('servicios')">Servicios</button>
+    <button class="elhy-quick-btn" onclick="elhyQuick('ia')">Inteligencia Artificial</button>
+    <button class="elhy-quick-btn" onclick="elhyQuick('dashboards')">Dashboards</button>
+    <button class="elhy-quick-btn" onclick="elhyQuick('web')">Desarrollo Web</button>
+    <button class="elhy-quick-btn" onclick="elhyQuick('contacto')">Contacto</button>
+  </div>
+  <div id="elhy-chat-footer">
+    <input id="elhy-input" type="text" placeholder="Escribe tu consulta..." autocomplete="off" />
+    <button id="elhy-send-btn" aria-label="Enviar mensaje">
+      <svg viewBox="0 0 16 16"><path d="M1.5 1l13 7-13 7V9.5L11 8 1.5 6.5V1z"/></svg>
+    </button>
+  </div>
+  <div id="elhy-wa-strip">
+    <a id="elhy-wa-link" href="https://wa.me/593989938910?text=Hola%20Christian%2C%20me%20contacto%20desde%20el%20sitio%20web.%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Hablar por WhatsApp con Christian
+    </a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var fab=document.getElementById('elhy-fab-btn');
+  var win=document.getElementById('elhy-chat-window');
+  var msgs=document.getElementById('elhy-messages');
+  var inp=document.getElementById('elhy-input');
+  var sendBtn=document.getElementById('elhy-send-btn');
+  var closeBtn=document.getElementById('elhy-close-btn');
+  var greeted=false;
+
+  var KB={
+    servicios:"En ElhyAi Consultores ofrecemos:\n• Consultoría en Recuperación de Cartera\n• Analítica Empresarial y Dashboards\n• Implementación de Inteligencia Artificial\n• Desarrollo Web Corporativo\n• Identidad Visual y Branding\n• Contenido Digital con IA\n• Capacitación y Desarrollo Empresarial\n• Diagnóstico Empresarial Integral\n\n¿Le gustaría más detalle sobre alguno?",
+    ia:"Implementamos soluciones de Inteligencia Artificial adaptadas a su empresa: automatización de procesos, modelos predictivos, análisis de datos avanzado y herramientas de IA aplicadas a la gestión y estrategia. Nuestro consultor cuenta con formación especializada en IA y Big Data.",
+    dashboards:"Diseñamos dashboards ejecutivos y herramientas de Business Intelligence personalizadas: tableros de control en tiempo real, KPIs estratégicos, analítica predictiva y visualización de datos para la toma de decisiones directiva.",
+    web:"Desarrollamos sitios web corporativos modernos y de alto rendimiento: diseño profesional, identidad de marca, optimización de conversiones y plataformas digitales alineadas a los objetivos de su organización.",
+    transformacion:"Acompañamos el proceso de transformación digital de su empresa: digitalización de procesos, modernización operativa, adopción de tecnología y gestión del cambio para construir una organización más eficiente y competitiva.",
+    consultoria:"Ofrecemos consultoría estratégica empresarial con un enfoque basado en datos y más de 20 años de experiencia. Combinamos metodología MBA con herramientas de BI, Big Data e Inteligencia Artificial.",
+    contacto:"Puede contactarnos directamente:\n📱 WhatsApp: +593 98 993 8910\n✉️ Email: info@elhyai.com\n📍 Milagro, Guayas, Ecuador\n\nO use el botón de WhatsApp aquí abajo para una respuesta inmediata.",
+    cartera:"Diseñamos estrategias y procesos profesionales para mejorar la recuperación de cartera, optimizar el flujo de caja y gestionar deuda de manera eficiente para su organización.",
+    diagnostico:"El diagnóstico empresarial integral evalúa procesos, tecnología, datos y estrategia de su organización, entregando una hoja de ruta personalizada con las mejoras priorizadas por impacto y viabilidad.",
+    capacitacion:"Desarrollamos programas de formación en estrategia, analítica de datos e Inteligencia Artificial para equipos directivos, con metodología práctica orientada a resultados.",
+    branding:"Creamos identidad corporativa, diseño de marca y activos visuales profesionales alineados a su posicionamiento estratégico. También desarrollamos branding sonoro e identidad audiovisual.",
+  };
+
+  function keyword(t){
+    t=t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+    if(/servicio|ofrecen|catalogo|lista|que hacen|que ofrecen/.test(t))return'servicios';
+    if(/inteligencia artificial|ia |machine learning|automatizacion|bot|nlp|llm|ia$/.test(t))return'ia';
+    if(/dashboard|tablero|bi |business intelligence|kpi|visualizacion|grafico|reporte/.test(t))return'dashboards';
+    if(/web|pagina|sitio|desarrollo web|corporativo/.test(t))return'web';
+    if(/transformacion digital|digitalizacion|modernizacion/.test(t))return'transformacion';
+    if(/consultoria|estrategia|asesoria|asesor/.test(t))return'consultoria';
+    if(/contacto|email|correo|telefono|whatsapp|llamar|ubicacion|donde/.test(t))return'contacto';
+    if(/cartera|cobranza|deuda|recuperacion/.test(t))return'cartera';
+    if(/diagnostico|evaluacion|auditoria/.test(t))return'diagnostico';
+    if(/capacitacion|formacion|curso|taller/.test(t))return'capacitacion';
+    if(/branding|marca|identidad|logo|imagen|diseno|sonoro/.test(t))return'branding';
+    return null;
+  }
+
+  function addMsg(text,role){
+    var d=document.createElement('div');
+    d.className='elhy-msg '+role;
+    d.textContent=text;
+    msgs.appendChild(d);
+    msgs.scrollTop=msgs.scrollHeight;
+  }
+
+  function botTyping(text,delay){
+    delay=delay||520;
+    var d=document.createElement('div');
+    d.className='elhy-msg bot';
+    d.textContent='···';
+    msgs.appendChild(d);
+    msgs.scrollTop=msgs.scrollHeight;
+    setTimeout(function(){d.textContent=text;msgs.scrollTop=msgs.scrollHeight;},delay);
+  }
+
+  function greet(){
+    if(greeted)return;
+    greeted=true;
+    botTyping("¡Hola! 👋 Soy el asistente virtual de ElhyAi Consultores. Estoy aquí para orientarle sobre nuestros servicios de consultoría estratégica, analítica de datos e inteligencia artificial.\n\n¿En qué puedo ayudarle hoy?",300);
+  }
+
+  function openChat(){
+    win.style.display='flex';
+    greet();
+    setTimeout(function(){inp.focus();},350);
+  }
+
+  fab.addEventListener('click',function(){
+    if(win.style.display==='flex'){win.style.display='none';}else{openChat();}
+  });
+  closeBtn.addEventListener('click',function(){win.style.display='none';});
+
+  function handleSend(){
+    var text=inp.value.trim();
+    if(!text)return;
+    addMsg(text,'user');
+    inp.value='';
+    var key=keyword(text);
+    var reply=key?KB[key]:"Gracias por su consulta. Para brindarle información más precisa, le recomiendo contactarnos directamente. Nuestro consultor Christian Sánchez le atenderá personalmente.\n\n📱 WhatsApp: +593 98 993 8910\n✉️ info@elhyai.com";
+    botTyping(reply);
+  }
+
+  sendBtn.addEventListener('click',handleSend);
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')handleSend();});
+
+  window.elhyQuick=function(topic){
+    if(win.style.display!=='flex')openChat();
+    var labels={servicios:'¿Qué servicios ofrecen?',ia:'Cuéntame sobre Inteligencia Artificial',dashboards:'¿Qué son los dashboards?',web:'Desarrollo Web',contacto:'¿Cómo los contacto?'};
+    addMsg(labels[topic]||topic,'user');
+    botTyping(KB[topic]||KB.servicios);
+  };
+})();
+</script>
+<!-- FIN ASISTENTE VIRTUAL -->
