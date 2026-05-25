@@ -605,7 +605,128 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
     </div>
   </div>
 </section>
+<!-- TESTIMONIOS -->
+<section class="testimonios" id="testimonios">
+  <div class="testimonios-header reveal">
+    <div class="section-label">Lo que dicen de nosotros</div>
+    <h2 class="section-title">Testimonios</h2>
+    <p>Empresas, emprendedores y profesionales que ya transformaron sus procesos con ElhyAi Consultores.</p>
+  </div>
+  <div class="testi-track-wrap">
+    <div class="testi-track" id="testiTrack">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Los videos realizados con inteligencia artificial fueron excepcionales y hoy funcionan perfectamente para mi empresa."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">CM</div>
+          <div><div class="testi-name">Carlos Mendoza</div><div class="testi-role">CEO Comercial</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Me desarrollaron una página web muy profesional y ahora tengo gran parte de mis procesos automatizados en el área agrícola."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AL</div>
+          <div><div class="testi-name">Andrea López</div><div class="testi-role">Sector Agroindustrial</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Las canciones creadas para mi proyecto ayudaron muchísimo al posicionamiento de mi marca."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div><div class="testi-name">Miguel Ramírez</div><div class="testi-role">Emprendedor Digital</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Las imágenes y el logo corporativo fueron realizados de manera profesional. Mi marca ahora tiene identidad visual sólida."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">VT</div>
+          <div><div class="testi-name">Valeria Torres</div><div class="testi-role">Dueña de Marca</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Me desarrollaron una aplicación para automatizar procesos que antes hacía manualmente. Gracias ElhyAi Consultores."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JC</div>
+          <div><div class="testi-name">Jorge Castillo</div><div class="testi-role">Gerente Operativo</div></div>
+        </div>
+      </div>
+      <!-- duplicado para loop infinito -->
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Los videos realizados con inteligencia artificial fueron excepcionales y hoy funcionan perfectamente para mi empresa."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">CM</div>
+          <div><div class="testi-name">Carlos Mendoza</div><div class="testi-role">CEO Comercial</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Me desarrollaron una página web muy profesional y ahora tengo gran parte de mis procesos automatizados en el área agrícola."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AL</div>
+          <div><div class="testi-name">Andrea López</div><div class="testi-role">Sector Agroindustrial</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Las canciones creadas para mi proyecto ayudaron muchísimo al posicionamiento de mi marca."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MR</div>
+          <div><div class="testi-name">Miguel Ramírez</div><div class="testi-role">Emprendedor Digital</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Las imágenes y el logo corporativo fueron realizados de manera profesional. Mi marca ahora tiene identidad visual sólida."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">VT</div>
+          <div><div class="testi-name">Valeria Torres</div><div class="testi-role">Dueña de Marca</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Me desarrollaron una aplicación para automatizar procesos que antes hacía manualmente. Gracias ElhyAi Consultores."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JC</div>
+          <div><div class="testi-name">Jorge Castillo</div><div class="testi-role">Gerente Operativo</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<style>
+.testimonios{background:var(--navy);padding:7rem 0;position:relative;overflow:hidden;}
+.testimonios::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(29,95,196,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(29,95,196,0.04) 1px,transparent 1px);background-size:55px 55px;pointer-events:none;}
+.testimonios-header{text-align:center;margin-bottom:3.5rem;padding:0 5%;position:relative;z-index:1;}
+.testimonios-header .section-label{color:var(--gold-light);}
+.testimonios-header .section-title{color:white;}
+.testimonios-header p{color:rgba(255,255,255,0.48);max-width:580px;margin:0.75rem auto 0;font-size:0.95rem;line-height:1.8;font-weight:300;}
+.testi-track-wrap{position:relative;overflow:hidden;z-index:1;}
+.testi-track-wrap::before,.testi-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none;}
+.testi-track-wrap::before{left:0;background:linear-gradient(90deg,var(--navy) 0%,transparent 100%);}
+.testi-track-wrap::after{right:0;background:linear-gradient(270deg,var(--navy) 0%,transparent 100%);}
+.testi-track{display:flex;gap:1.4rem;padding:1rem 0 1.5rem;width:max-content;animation:testiScroll 38s linear infinite;}
+.testi-track:hover{animation-play-state:paused;}
+@keyframes testiScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.testi-card{background:rgba(255,255,255,0.035);border:1px solid rgba(29,95,196,0.22);border-radius:16px;padding:1.8rem 1.6rem;width:300px;flex-shrink:0;position:relative;transition:border-color 0.3s,background 0.3s;overflow:hidden;}
+.testi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--gold),transparent);opacity:0;transition:opacity 0.3s;}
+.testi-card:hover{background:rgba(255,255,255,0.065);border-color:rgba(29,95,196,0.5);box-shadow:0 16px 50px rgba(0,0,0,0.35);}
+.testi-card:hover::before{opacity:1;}
+.testi-stars{color:var(--gold-light);font-size:0.9rem;letter-spacing:0.1em;margin-bottom:1rem;}
+.testi-quote{font-size:0.85rem;color:rgba(255,255,255,0.72);line-height:1.75;font-weight:300;font-style:italic;margin-bottom:1.4rem;flex-grow:1;}
+.testi-author{display:flex;align-items:center;gap:0.85rem;border-top:1px solid rgba(255,255,255,0.07);padding-top:1.1rem;}
+.testi-avatar{width:40px;height:40px;min-width:40px;background:linear-gradient(135deg,var(--accent) 0%,var(--blue-deep) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:0.88rem;font-weight:700;color:white;border:1.5px solid rgba(64,128,232,0.4);}
+.testi-name{font-size:0.83rem;font-weight:700;color:white;line-height:1.3;}
+.testi-role{font-size:0.72rem;color:var(--gold-light);font-weight:500;margin-top:0.15rem;letter-spacing:0.04em;}
+@media(max-width:900px){.testi-track-wrap::before,.testi-track-wrap::after{width:60px;}.testi-card{width:270px;}}
+@media(max-width:600px){.testi-card{width:240px;padding:1.4rem 1.2rem;}.testi-track-wrap::before,.testi-track-wrap::after{width:40px;}}
+</style>
+<!-- FIN TESTIMONIOS -->
 <!-- CONSULTOR -->
 <section class="consultant" id="consultant">
   <div class="consultant-inner reveal">
