@@ -425,7 +425,7 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
         <div class="hero-prop">MBA · EUDE Business School</div>
       </div>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Solicitar diagnóstico empresarial →</a>
+        <a href="#contact" class="btn-primary">Solicitar GRATIS Diagnóstico Empresarial →</a>
         <a href="#services" class="btn-secondary">Explorar servicios</a>
       </div>
       <div class="hero-stats">
@@ -692,7 +692,7 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
         </select>
       </div>
       <div class="form-group"><label>Describa su desafío principal</label><textarea id="f-mensaje" rows="4" placeholder="¿Cuál es el principal desafío o meta que desea abordar con nuestra consultoría?"></textarea></div>
-      <button class="form-btn" onclick="handleForm()">Solicitar diagnóstico empresarial →</button>
+      <button class="form-btn" onclick="handleForm()">Solicitar Gratis diagnóstico empresarial →</button>
     </div>
   </div>
 </section>
@@ -863,7 +863,7 @@ function handleForm(){
     if(!val){el.style.borderColor='#e05252';valid=false;}else{el.style.borderColor='';}
   });
   if(!valid)return;
-  const text=`Hola Christian, me contacto desde su sitio web para solicitar un *diagnóstico empresarial*.\n\n*Nombre:* ${nombre}\n*Correo:* ${correo}${telefono?'\n*Teléfono:* '+telefono:''}\n*Empresa:* ${empresa}${area?'\n*Área de interés:* '+area:''}\n\n*Descripción del desafío:*\n${mensaje}\n\nQuedo a la espera de su respuesta. ¡Gracias!`;
+  const text=`Hola Christian, me contacto desde su sitio web para solicitar Gratis un *diagnóstico empresarial*.\n\n*Nombre:* ${nombre}\n*Correo:* ${correo}${telefono?'\n*Teléfono:* '+telefono:''}\n*Empresa:* ${empresa}${area?'\n*Área de interés:* '+area:''}\n\n*Descripción del desafío:*\n${mensaje}\n\nQuedo a la espera de su respuesta. ¡Gracias!`;
   btn.textContent='✓ Redirigiendo a WhatsApp...'; btn.style.background='#16a34a';
   setTimeout(()=>{
     window.open('https://wa.me/593989938910?text='+encodeURIComponent(text),'_blank');
@@ -882,7 +882,7 @@ const SERVICES=[
   {icon:'🎬',name:'Contenido Digital con IA'},
   {icon:'🎓',name:'Capacitación & Desarrollo Empresarial'},
   {icon:'🎵',name:'Branding Sonoro Corporativo'},
-  {icon:'🗺️',name:'Diagnóstico Empresarial Integral'},
+  {icon:'🗺️',name:'Gratis Diagnóstico Empresarial Integral'},
 ];
 let selected=new Set();
 function toggleService(idx,btn){
