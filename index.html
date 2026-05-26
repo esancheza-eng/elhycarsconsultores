@@ -1043,7 +1043,7 @@ window.addEventListener('scroll',()=>{ document.getElementById('mainNav').style.
 .wa-float { position:fixed;bottom:1.8rem;right:1.8rem;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:0.7rem; }
 .wa-float-bubble { background:white;color:#111;font-family:'Outfit',sans-serif;font-size:0.82rem;font-weight:600;padding:0.5rem 1rem;border-radius:20px 20px 4px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.18);white-space:nowrap;opacity:0;transform:translateY(8px) scale(0.95);animation:waBubbleIn 0.5s 1.5s forwards;pointer-events:none; }
 @keyframes waBubbleIn { to { opacity:1;transform:translateY(0) scale(1); } }
-.wa-float-btn { width:48px;height:48px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(34,197,94,0.5);transition:transform 0.25s,box-shadow 0.25s;animation:waBtnIn 0.5s 1s forwards;opacity:0;position:relative; }
+.wa-float-btn { width:48px;height:48px;background:rgba(10,26,52,0.85);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(34,197,94,0.5);transition:transform 0.25s,box-shadow 0.25s;animation:waBtnIn 0.5s 1s forwards;opacity:0;position:relative; }
 @keyframes waBtnIn { from{opacity:0;transform:scale(0.6);} to{opacity:1;transform:scale(1);} }
 .wa-float-btn:hover { transform:scale(1.1);box-shadow:0 10px 35px rgba(34,197,94,0.65); }
 .wa-float-btn::before,.wa-float-btn::after { content:'';position:absolute;inset:0;border-radius:50%;background:#22c55e;opacity:0.4;animation:waPing 2.5s ease-out infinite; }
