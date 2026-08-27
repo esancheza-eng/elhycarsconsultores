@@ -378,203 +378,16 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
 }
 
 .pillar-icon,.area-icon,.step-icon,.why-icon,.cred-icon{display:flex;align-items:center;}
-.pillar-icon svg{width:34px;height:34px;}
-.area-icon svg{width:44px;height:44px;}
-.service-icon svg{width:26px;height:26px;}
-.step-icon svg{width:26px;height:26px;}
-.why-icon svg{width:46px;height:46px;}
-.cred-icon svg{width:30px;height:30px;}
-.contact-detail-icon svg{width:22px;height:22px;}
+.pillar-icon img{width:34px;height:34px;display:block;}
+.area-icon img{width:44px;height:44px;display:block;}
+.service-icon img{width:26px;height:26px;display:block;}
+.step-icon img{width:26px;height:26px;display:block;}
+.why-icon img{width:46px;height:46px;display:block;}
+.cred-icon img{width:30px;height:30px;display:block;}
+.contact-detail-icon img{width:22px;height:22px;display:block;}
 </style>
 </head>
 <body>
-<svg style="display:none" aria-hidden="true">
-<defs>
-<linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6fa8f7"/><stop offset="0.55" stop-color="#1d5fc4"/><stop offset="1" stop-color="#0a1f42"/></linearGradient>
-<linearGradient id="gBlue2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fbcff"/><stop offset="1" stop-color="#1d5fc4"/></linearGradient>
-<linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dfa0"/><stop offset="0.55" stop-color="#dba748"/><stop offset="1" stop-color="#8a651f"/></linearGradient>
-<linearGradient id="gNavy" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a3c60"/><stop offset="1" stop-color="#080f1e"/></linearGradient>
-<linearGradient id="gWhite" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c7d2e3"/></linearGradient>
-<linearGradient id="gGray" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a7b3c4"/><stop offset="1" stop-color="#5b6b82"/></linearGradient>
-<radialGradient id="gShine" cx="0.3" cy="0.25" r="0.75"><stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
-<filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
-<feDropShadow dx="0" dy="2.2" stdDeviation="1.8" flood-color="#000000" flood-opacity="0.4"/>
-</filter>
-</defs>
-
-<symbol id="icon-target" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="20" fill="url(#gWhite)"/>
-<circle cx="24" cy="24" r="14" fill="url(#gBlue)"/>
-<circle cx="24" cy="24" r="8" fill="url(#gWhite)"/>
-<circle cx="24" cy="24" r="4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="14" rx="12" ry="7" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-ai" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="4" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/><rect x="39" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="10" y="13" width="28" height="24" rx="9" fill="url(#gBlue)"/>
-<circle cx="19" cy="25" r="3.6" fill="url(#gWhite)"/><circle cx="29" cy="25" r="3.6" fill="url(#gWhite)"/>
-<rect x="18" y="31.5" width="12" height="3" rx="1.5" fill="url(#gGold)"/>
-<line x1="24" y1="13" x2="24" y2="6" stroke="url(#gGold)" stroke-width="3" stroke-linecap="round"/>
-<circle cx="24" cy="5.5" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="18" rx="9" ry="5" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-chart" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="28" width="9" height="14" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="19.5" y="17" width="9" height="25" rx="2.5" fill="url(#gBlue)"/>
-<rect x="33" y="8" width="9" height="34" rx="2.5" fill="url(#gGold)"/>
-<ellipse cx="24" cy="12" rx="8" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-globe" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="19" fill="url(#gBlue)"/>
-<ellipse cx="24" cy="24" rx="8" ry="19" fill="none" stroke="#ffffff" stroke-width="1.6" opacity="0.8"/>
-<line x1="5" y1="24" x2="43" y2="24" stroke="#ffffff" stroke-width="1.6" opacity="0.8"/>
-<path d="M7 15 Q24 24 41 15" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.65"/>
-<path d="M7 33 Q24 24 41 33" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.65"/>
-<circle cx="33" cy="13" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="16" cy="13" rx="9" ry="5" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-bolt" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="20" fill="url(#gNavy)"/>
-<path d="M27 5 L12 27 H22 L19 43 L37 18 H26 Z" fill="url(#gGold)"/>
-<ellipse cx="17" cy="14" rx="11" ry="6" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-laptop" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="8" y="9" width="32" height="21" rx="3" fill="url(#gBlue)"/>
-<rect x="11" y="12" width="26" height="15" rx="1.5" fill="url(#gNavy)"/>
-<path d="M17 16 L13 20 L17 24" stroke="url(#gGold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M31 16 L35 20 L31 24" stroke="url(#gGold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3 32 H45 L40 39 H8 Z" fill="url(#gBlue2)"/>
-<ellipse cx="16" cy="14" rx="8" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-briefcase" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="18" width="36" height="22" rx="4" fill="url(#gBlue)"/>
-<rect x="16.5" y="9" width="15" height="10" rx="2.5" fill="none" stroke="url(#gGold)" stroke-width="2.6"/>
-<rect x="6" y="24" width="36" height="6" fill="url(#gNavy)"/>
-<circle cx="24" cy="27" r="2.4" fill="url(#gGold)"/>
-<ellipse cx="16" cy="24" rx="8" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-growth" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="7" y="28" width="7" height="14" rx="2" fill="url(#gBlue2)"/>
-<rect x="18" y="20" width="7" height="22" rx="2" fill="url(#gBlue)"/>
-<rect x="29" y="11" width="7" height="31" rx="2" fill="url(#gGold)"/>
-<path d="M8 16 L20 8 L28 13 L41 3" stroke="url(#gGold)" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M32 3 H41 V12" stroke="url(#gGold)" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-</g></symbol>
-
-<symbol id="icon-palette" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 5 C11 5 3 14 3 24 C3 33 10 37 16 35 C18 34.2 18.6 31.5 17 29.8 C15.3 28 16 25 19 24.4 C30 22 43 25.5 43 14 C43 8 34 5 24 5 Z" fill="url(#gWhite)"/>
-<circle cx="14" cy="16" r="3.4" fill="url(#gBlue)"/><circle cx="24" cy="11" r="3.4" fill="url(#gGold)"/>
-<circle cx="34" cy="15" r="3.4" fill="url(#gBlue2)"/><circle cx="11" cy="27" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="16" cy="12" rx="9" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-video" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="16" width="36" height="24" rx="3" fill="url(#gBlue)"/>
-<path d="M6 16 L12 7 H18 L14 16 Z" fill="url(#gNavy)"/><path d="M18 16 L24 7 H30 L26 16 Z" fill="url(#gNavy)"/><path d="M30 16 L36 7 H42 L38 16 Z" fill="url(#gNavy)"/>
-<rect x="6" y="7" width="36" height="4.2" fill="url(#gNavy)"/>
-<circle cx="24" cy="28" r="6.6" fill="url(#gGold)"/><path d="M22 24.6 L29 28 L22 31.4 Z" fill="#3a2a08"/>
-<ellipse cx="16" cy="21" rx="7" ry="3.4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-cap" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 7 L45 17 L24 27 L3 17 Z" fill="url(#gNavy)"/>
-<path d="M13 20 V30 C13 33.5 18.5 37 24 37 C29.5 37 35 33.5 35 30 V20" fill="none" stroke="url(#gBlue)" stroke-width="3"/>
-<line x1="41" y1="17" x2="41" y2="31" stroke="url(#gGold)" stroke-width="2.4" stroke-linecap="round"/><circle cx="41" cy="33" r="2.8" fill="url(#gGold)"/>
-<ellipse cx="18" cy="13" rx="10" ry="3.4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-music" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="13" cy="37" r="6.4" fill="url(#gBlue)"/><circle cx="34" cy="32" r="6.4" fill="url(#gBlue2)"/>
-<rect x="18.5" y="9" width="3" height="27" fill="url(#gGold)"/><rect x="39.5" y="5" width="3" height="26" fill="url(#gGold)"/>
-<path d="M18.8 9 L42.8 5 V13 L18.8 17 Z" fill="url(#gGold)"/>
-<ellipse cx="9" cy="34" rx="4" ry="2" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-map" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M6 12 L18 7 L30 12 L42 7 V36 L30 41 L18 36 L6 41 Z" fill="url(#gWhite)"/>
-<line x1="18" y1="7" x2="18" y2="36" stroke="#7a8694" stroke-width="1.2" opacity="0.5"/><line x1="30" y1="12" x2="30" y2="41" stroke="#7a8694" stroke-width="1.2" opacity="0.5"/>
-<path d="M11 30 Q19 17 27 26 Q33 32 39 19" stroke="url(#gGold)" stroke-width="2.6" fill="none" stroke-dasharray="3 3" stroke-linecap="round"/>
-<circle cx="11" cy="30" r="3" fill="url(#gBlue)"/><circle cx="39" cy="19" r="3" fill="url(#gBlue)"/>
-<ellipse cx="16" cy="14" rx="9" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-search" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="20" cy="20" r="13.5" fill="url(#gWhite)"/>
-<circle cx="20" cy="20" r="9" fill="url(#gGold)"/>
-<line x1="29" y1="29" x2="42" y2="42" stroke="url(#gBlue)" stroke-width="5" stroke-linecap="round"/>
-<ellipse cx="15" cy="14" rx="6" ry="3" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-gear" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<g fill="url(#gBlue)">
-<circle cx="24" cy="24" r="14"/>
-<rect x="21" y="2" width="6" height="8" rx="1.5"/><rect x="21" y="38" width="6" height="8" rx="1.5"/>
-<rect x="2" y="21" width="8" height="6" rx="1.5"/><rect x="38" y="21" width="8" height="6" rx="1.5"/>
-<rect x="21" y="2" width="6" height="8" rx="1.5" transform="rotate(45 24 24)"/><rect x="21" y="38" width="6" height="8" rx="1.5" transform="rotate(45 24 24)"/>
-<rect x="2" y="21" width="8" height="6" rx="1.5" transform="rotate(45 24 24)"/><rect x="38" y="21" width="8" height="6" rx="1.5" transform="rotate(45 24 24)"/>
-</g>
-<circle cx="24" cy="24" r="7.5" fill="url(#gWhite)"/><circle cx="24" cy="24" r="4" fill="url(#gGold)"/>
-<ellipse cx="18" cy="16" rx="8" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-brain" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M18 7 C10 7 6 13 7 19 C3 21 3 30 8 32 C7 38 13 42 19 40 C21 43 27 43 29 40 C35 42 41 38 40 32 C45 30 45 21 41 19 C42 13 38 7 30 7 C28 5 20 5 18 7 Z" fill="url(#gBlue2)"/>
-<path d="M24 9 V39" stroke="#0a1f42" stroke-width="1.6" opacity="0.4"/>
-<path d="M14 15 Q18 20 14 24 Q18 28 15 34" stroke="#0a1f42" stroke-width="1.6" fill="none" opacity="0.4"/>
-<path d="M34 15 Q30 20 34 24 Q30 28 33 34" stroke="#0a1f42" stroke-width="1.6" fill="none" opacity="0.4"/>
-<circle cx="31" cy="13" r="2.6" fill="url(#gGold)"/>
-<ellipse cx="17" cy="14" rx="8" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-rocket" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 3 C31 10 33 19 30 27 L18 27 C15 19 17 10 24 3 Z" fill="url(#gWhite)"/>
-<circle cx="24" cy="16" r="4" fill="url(#gBlue)"/>
-<path d="M18 22 L8 32 L16 30 Z" fill="url(#gGold)"/><path d="M30 22 L40 32 L32 30 Z" fill="url(#gGold)"/>
-<path d="M19 27 H29 L27 35 H21 Z" fill="url(#gGray)"/>
-<path d="M20 35 L24 45 L28 35 Z" fill="url(#gGold)"/>
-<ellipse cx="19" cy="9" rx="6" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-bulb" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="18" r="14" fill="url(#gGold)"/>
-<rect x="18" y="29" width="12" height="8" rx="2.4" fill="url(#gGray)"/><rect x="18" y="38" width="12" height="3.4" rx="1.6" fill="#3d4a5c"/>
-<ellipse cx="18" cy="12" rx="7" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-institution" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="5" y="34" width="38" height="4.5" fill="url(#gNavy)"/>
-<rect x="9" y="18" width="4.5" height="16" fill="url(#gBlue)"/><rect x="17.5" y="18" width="4.5" height="16" fill="url(#gBlue)"/>
-<rect x="26" y="18" width="4.5" height="16" fill="url(#gBlue)"/><rect x="34.5" y="18" width="4.5" height="16" fill="url(#gBlue)"/>
-<path d="M3 18 L24 5 L45 18 Z" fill="url(#gGold)"/>
-<ellipse cx="18" cy="10" rx="10" ry="3" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-phone" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="13" y="3" width="22" height="42" rx="5" fill="url(#gBlue)"/>
-<rect x="16.5" y="9" width="15" height="27" rx="1.4" fill="url(#gNavy)"/>
-<circle cx="24" cy="40" r="2.4" fill="url(#gGold)"/>
-<ellipse cx="19" cy="12" rx="6" ry="3" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-mail" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="4" y="10" width="40" height="28" rx="4" fill="url(#gBlue)"/>
-<path d="M4 12 L24 28 L44 12" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-<ellipse cx="14" cy="16" rx="8" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-
-<symbol id="icon-pin" viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 3 C14 3 7 11 7 20 C7 32 24 45 24 45 C24 45 41 32 41 20 C41 11 34 3 24 3 Z" fill="url(#gGold)"/>
-<circle cx="24" cy="20" r="8.5" fill="url(#gWhite)"/><circle cx="24" cy="20" r="4.4" fill="url(#gBlue)"/>
-<ellipse cx="18" cy="12" rx="7" ry="4" fill="url(#gShine)"/>
-</g></symbol>
-</svg>
 
 
 <!-- NAV -->
@@ -701,37 +514,10 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
       <p>Nuestro enfoque metodológico combina el rigor académico de una formación internacional —MBA en EUDE Business School, Madrid— con más de dos décadas de experiencia práctica en diagnóstico empresarial, transformación de procesos y estrategia digital. Trabajamos con directivos y emprendedores que buscan tomar decisiones más inteligentes y construir organizaciones más eficientes y competitivas.</p>
     </div>
     <div class="about-pillars reveal">
-      <div class="pillar"><div class="pillar-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="20" fill="url(#gWhite)"/>
-<circle cx="24" cy="24" r="14" fill="url(#gBlue)"/>
-<circle cx="24" cy="24" r="8" fill="url(#gWhite)"/>
-<circle cx="24" cy="24" r="4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="14" rx="12" ry="7" fill="url(#gShine)"/>
-</g></svg></div><h4>Enfoque Estratégico</h4><p>Diagnóstico profundo y planes de acción orientados a resultados empresariales medibles.</p></div>
-      <div class="pillar"><div class="pillar-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="4" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/><rect x="39" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="10" y="13" width="28" height="24" rx="9" fill="url(#gBlue)"/>
-<circle cx="19" cy="25" r="3.6" fill="url(#gWhite)"/><circle cx="29" cy="25" r="3.6" fill="url(#gWhite)"/>
-<rect x="18" y="31.5" width="12" height="3" rx="1.5" fill="url(#gGold)"/>
-<line x1="24" y1="13" x2="24" y2="6" stroke="url(#gGold)" stroke-width="3" stroke-linecap="round"/>
-<circle cx="24" cy="5.5" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="18" rx="9" ry="5" fill="url(#gShine)"/>
-</g></svg></div><h4>Inteligencia Artificial</h4><p>Implementación pragmática de IA en procesos críticos del negocio.</p></div>
-      <div class="pillar"><div class="pillar-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="28" width="9" height="14" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="19.5" y="17" width="9" height="25" rx="2.5" fill="url(#gBlue)"/>
-<rect x="33" y="8" width="9" height="34" rx="2.5" fill="url(#gGold)"/>
-<ellipse cx="24" cy="12" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></div><h4>Decisiones por Datos</h4><p>Business Intelligence y analítica avanzada para liderazgo informado.</p></div>
-      <div class="pillar"><div class="pillar-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="19" fill="url(#gBlue)"/>
-<ellipse cx="24" cy="24" rx="8" ry="19" fill="none" stroke="#ffffff" stroke-width="1.6" opacity="0.8"/>
-<line x1="5" y1="24" x2="43" y2="24" stroke="#ffffff" stroke-width="1.6" opacity="0.8"/>
-<path d="M7 15 Q24 24 41 15" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.65"/>
-<path d="M7 33 Q24 24 41 33" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.65"/>
-<circle cx="33" cy="13" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="16" cy="13" rx="9" ry="5" fill="url(#gShine)"/>
-</g></svg></div><h4>Presencia Digital</h4><p>Estrategia e infraestructura digital de nivel corporativo.</p></div>
+      <div class="pillar"><div class="pillar-icon"><img src="icon-target.png" alt="icon-target" loading="lazy"></div><h4>Enfoque Estratégico</h4><p>Diagnóstico profundo y planes de acción orientados a resultados empresariales medibles.</p></div>
+      <div class="pillar"><div class="pillar-icon"><img src="icon-ai.png" alt="icon-ai" loading="lazy"></div><h4>Inteligencia Artificial</h4><p>Implementación pragmática de IA en procesos críticos del negocio.</p></div>
+      <div class="pillar"><div class="pillar-icon"><img src="icon-chart.png" alt="icon-chart" loading="lazy"></div><h4>Decisiones por Datos</h4><p>Business Intelligence y analítica avanzada para liderazgo informado.</p></div>
+      <div class="pillar"><div class="pillar-icon"><img src="icon-globe.png" alt="icon-globe" loading="lazy"></div><h4>Presencia Digital</h4><p>Estrategia e infraestructura digital de nivel corporativo.</p></div>
     </div>
   </div>
 </section>
@@ -744,110 +530,26 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
     <p>Cinco áreas de especialización que cubren el ciclo completo de la transformación empresarial, desde el diagnóstico hasta la implementación.</p>
   </div>
   <div class="service-areas">
-    <div class="area-card reveal"><span class="area-number">Área 01</span><span class="area-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="20" fill="url(#gWhite)"/>
-<circle cx="24" cy="24" r="14" fill="url(#gBlue)"/>
-<circle cx="24" cy="24" r="8" fill="url(#gWhite)"/>
-<circle cx="24" cy="24" r="4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="14" rx="12" ry="7" fill="url(#gShine)"/>
-</g></svg></span><h3>Estrategia Empresarial</h3><p>Diagnóstico organizacional, planeación estratégica y hoja de ruta para el crecimiento sostenible.</p></div>
-    <div class="area-card reveal"><span class="area-number">Área 02</span><span class="area-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="28" width="9" height="14" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="19.5" y="17" width="9" height="25" rx="2.5" fill="url(#gBlue)"/>
-<rect x="33" y="8" width="9" height="34" rx="2.5" fill="url(#gGold)"/>
-<ellipse cx="24" cy="12" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></span><h3>Analítica de Datos & Business Intelligence</h3><p>Dashboards ejecutivos, KPIs estratégicos y analítica predictiva para decisiones informadas.</p></div>
-    <div class="area-card reveal"><span class="area-number">Área 03</span><span class="area-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="4" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/><rect x="39" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="10" y="13" width="28" height="24" rx="9" fill="url(#gBlue)"/>
-<circle cx="19" cy="25" r="3.6" fill="url(#gWhite)"/><circle cx="29" cy="25" r="3.6" fill="url(#gWhite)"/>
-<rect x="18" y="31.5" width="12" height="3" rx="1.5" fill="url(#gGold)"/>
-<line x1="24" y1="13" x2="24" y2="6" stroke="url(#gGold)" stroke-width="3" stroke-linecap="round"/>
-<circle cx="24" cy="5.5" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="18" rx="9" ry="5" fill="url(#gShine)"/>
-</g></svg></span><h3>Implementación de Inteligencia Artificial</h3><p>Automatización inteligente, modelos predictivos y soluciones de IA aplicadas al negocio.</p></div>
-    <div class="area-card reveal"><span class="area-number">Área 04</span><span class="area-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="20" fill="url(#gNavy)"/>
-<path d="M27 5 L12 27 H22 L19 43 L37 18 H26 Z" fill="url(#gGold)"/>
-<ellipse cx="17" cy="14" rx="11" ry="6" fill="url(#gShine)"/>
-</g></svg></span><h3>Transformación Digital</h3><p>Digitalización de procesos, modernización operativa y cultura de innovación empresarial.</p></div>
-    <div class="area-card reveal"><span class="area-number">Área 05</span><span class="area-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="8" y="9" width="32" height="21" rx="3" fill="url(#gBlue)"/>
-<rect x="11" y="12" width="26" height="15" rx="1.5" fill="url(#gNavy)"/>
-<path d="M17 16 L13 20 L17 24" stroke="url(#gGold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M31 16 L35 20 L31 24" stroke="url(#gGold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3 32 H45 L40 39 H8 Z" fill="url(#gBlue2)"/>
-<ellipse cx="16" cy="14" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></span><h3>Desarrollo Web Profesional</h3><p>Presencia digital corporativa, plataformas web de alto rendimiento e identidad de marca.</p></div>
+    <div class="area-card reveal"><span class="area-number">Área 01</span><span class="area-icon"><img src="icon-target.png" alt="icon-target" loading="lazy"></span><h3>Estrategia Empresarial</h3><p>Diagnóstico organizacional, planeación estratégica y hoja de ruta para el crecimiento sostenible.</p></div>
+    <div class="area-card reveal"><span class="area-number">Área 02</span><span class="area-icon"><img src="icon-chart.png" alt="icon-chart" loading="lazy"></span><h3>Analítica de Datos & Business Intelligence</h3><p>Dashboards ejecutivos, KPIs estratégicos y analítica predictiva para decisiones informadas.</p></div>
+    <div class="area-card reveal"><span class="area-number">Área 03</span><span class="area-icon"><img src="icon-ai.png" alt="icon-ai" loading="lazy"></span><h3>Implementación de Inteligencia Artificial</h3><p>Automatización inteligente, modelos predictivos y soluciones de IA aplicadas al negocio.</p></div>
+    <div class="area-card reveal"><span class="area-number">Área 04</span><span class="area-icon"><img src="icon-bolt.png" alt="icon-bolt" loading="lazy"></span><h3>Transformación Digital</h3><p>Digitalización de procesos, modernización operativa y cultura de innovación empresarial.</p></div>
+    <div class="area-card reveal"><span class="area-number">Área 05</span><span class="area-icon"><img src="icon-laptop.png" alt="icon-laptop" loading="lazy"></span><h3>Desarrollo Web Profesional</h3><p>Presencia digital corporativa, plataformas web de alto rendimiento e identidad de marca.</p></div>
   </div>
   <div class="services-sub-header reveal">
     <h3>Servicios especializados por área</h3>
     <p>Seleccione los servicios de su interés y solicite una propuesta a medida</p>
   </div>
   <div class="services-grid">
-    <div class="service-card reveal" id="svc-0"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="18" width="36" height="22" rx="4" fill="url(#gBlue)"/>
-<rect x="16.5" y="9" width="15" height="10" rx="2.5" fill="none" stroke="url(#gGold)" stroke-width="2.6"/>
-<rect x="6" y="24" width="36" height="6" fill="url(#gNavy)"/>
-<circle cx="24" cy="27" r="2.4" fill="url(#gGold)"/>
-<ellipse cx="16" cy="24" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></div><h3>Consultoría en Recuperación de Cartera</h3><p>Estrategias y procesos profesionales para mejorar la recuperación de deuda y optimizar el flujo de caja.</p><button class="service-add-btn" onclick="toggleService(0,this)"><span>+</span> Agregar al pedido</button></div>
-    <div class="service-card reveal" id="svc-1"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="7" y="28" width="7" height="14" rx="2" fill="url(#gBlue2)"/>
-<rect x="18" y="20" width="7" height="22" rx="2" fill="url(#gBlue)"/>
-<rect x="29" y="11" width="7" height="31" rx="2" fill="url(#gGold)"/>
-<path d="M8 16 L20 8 L28 13 L41 3" stroke="url(#gGold)" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M32 3 H41 V12" stroke="url(#gGold)" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-</g></svg></div><h3>Analítica Empresarial & Dashboards</h3><p>Diseño de tableros ejecutivos y herramientas de BI para monitoreo estratégico en tiempo real.</p><button class="service-add-btn" onclick="toggleService(1,this)"><span>+</span> Agregar al pedido</button></div>
-    <div class="service-card reveal" id="svc-2"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="4" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/><rect x="39" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="10" y="13" width="28" height="24" rx="9" fill="url(#gBlue)"/>
-<circle cx="19" cy="25" r="3.6" fill="url(#gWhite)"/><circle cx="29" cy="25" r="3.6" fill="url(#gWhite)"/>
-<rect x="18" y="31.5" width="12" height="3" rx="1.5" fill="url(#gGold)"/>
-<line x1="24" y1="13" x2="24" y2="6" stroke="url(#gGold)" stroke-width="3" stroke-linecap="round"/>
-<circle cx="24" cy="5.5" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="18" rx="9" ry="5" fill="url(#gShine)"/>
-</g></svg></div><h3>Implementación de IA en Procesos</h3><p>Automatización inteligente y soluciones de inteligencia artificial adaptadas a las operaciones de su empresa.</p><button class="service-add-btn" onclick="toggleService(2,this)"><span>+</span> Agregar al pedido</button></div>
-    <div class="service-card reveal" id="svc-3"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="8" y="9" width="32" height="21" rx="3" fill="url(#gBlue)"/>
-<rect x="11" y="12" width="26" height="15" rx="1.5" fill="url(#gNavy)"/>
-<path d="M17 16 L13 20 L17 24" stroke="url(#gGold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M31 16 L35 20 L31 24" stroke="url(#gGold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3 32 H45 L40 39 H8 Z" fill="url(#gBlue2)"/>
-<ellipse cx="16" cy="14" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></div><h3>Desarrollo Web Corporativo</h3><p>Diseño y desarrollo de sitios web modernos, funcionales y optimizados para generar confianza y conversiones.</p><button class="service-add-btn" onclick="toggleService(3,this)"><span>+</span> Agregar al pedido</button></div>
-    <div class="service-card reveal" id="svc-4"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 5 C11 5 3 14 3 24 C3 33 10 37 16 35 C18 34.2 18.6 31.5 17 29.8 C15.3 28 16 25 19 24.4 C30 22 43 25.5 43 14 C43 8 34 5 24 5 Z" fill="url(#gWhite)"/>
-<circle cx="14" cy="16" r="3.4" fill="url(#gBlue)"/><circle cx="24" cy="11" r="3.4" fill="url(#gGold)"/>
-<circle cx="34" cy="15" r="3.4" fill="url(#gBlue2)"/><circle cx="11" cy="27" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="16" cy="12" rx="9" ry="4" fill="url(#gShine)"/>
-</g></svg></div><h3>Identidad Visual & Branding</h3><p>Creación de identidad corporativa, diseño de marca y activos visuales profesionales alineados a su posicionamiento.</p><button class="service-add-btn" onclick="toggleService(4,this)"><span>+</span> Agregar al pedido</button></div>
-    <div class="service-card reveal" id="svc-5"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="16" width="36" height="24" rx="3" fill="url(#gBlue)"/>
-<path d="M6 16 L12 7 H18 L14 16 Z" fill="url(#gNavy)"/><path d="M18 16 L24 7 H30 L26 16 Z" fill="url(#gNavy)"/><path d="M30 16 L36 7 H42 L38 16 Z" fill="url(#gNavy)"/>
-<rect x="6" y="7" width="36" height="4.2" fill="url(#gNavy)"/>
-<circle cx="24" cy="28" r="6.6" fill="url(#gGold)"/><path d="M22 24.6 L29 28 L22 31.4 Z" fill="#3a2a08"/>
-<ellipse cx="16" cy="21" rx="7" ry="3.4" fill="url(#gShine)"/>
-</g></svg></div><h3>Contenido Digital con IA</h3><p>Producción de videos promocionales, imágenes y contenido audiovisual generado con inteligencia artificial.</p><button class="service-add-btn" onclick="toggleService(5,this)"><span>+</span> Agregar al pedido</button></div>
-    <div class="service-card reveal" id="svc-6"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 7 L45 17 L24 27 L3 17 Z" fill="url(#gNavy)"/>
-<path d="M13 20 V30 C13 33.5 18.5 37 24 37 C29.5 37 35 33.5 35 30 V20" fill="none" stroke="url(#gBlue)" stroke-width="3"/>
-<line x1="41" y1="17" x2="41" y2="31" stroke="url(#gGold)" stroke-width="2.4" stroke-linecap="round"/><circle cx="41" cy="33" r="2.8" fill="url(#gGold)"/>
-<ellipse cx="18" cy="13" rx="10" ry="3.4" fill="url(#gShine)"/>
-</g></svg></div><h3>Capacitación & Desarrollo Empresarial</h3><p>Programas de formación en estrategia, analítica de datos e IA para equipos directivos y de gestión.</p><button class="service-add-btn" onclick="toggleService(6,this)"><span>+</span> Agregar al pedido</button></div>
-    <div class="service-card reveal" id="svc-7"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="13" cy="37" r="6.4" fill="url(#gBlue)"/><circle cx="34" cy="32" r="6.4" fill="url(#gBlue2)"/>
-<rect x="18.5" y="9" width="3" height="27" fill="url(#gGold)"/><rect x="39.5" y="5" width="3" height="26" fill="url(#gGold)"/>
-<path d="M18.8 9 L42.8 5 V13 L18.8 17 Z" fill="url(#gGold)"/>
-<ellipse cx="9" cy="34" rx="4" ry="2" fill="url(#gShine)"/>
-</g></svg></div><h3>Branding Sonoro Corporativo</h3><p>Producción de música e identidad sonora personalizada para reforzar el posicionamiento de su marca.</p><button class="service-add-btn" onclick="toggleService(7,this)"><span>+</span> Agregar al pedido</button></div>
-    <div class="service-card reveal" id="svc-8"><div class="service-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M6 12 L18 7 L30 12 L42 7 V36 L30 41 L18 36 L6 41 Z" fill="url(#gWhite)"/>
-<line x1="18" y1="7" x2="18" y2="36" stroke="#7a8694" stroke-width="1.2" opacity="0.5"/><line x1="30" y1="12" x2="30" y2="41" stroke="#7a8694" stroke-width="1.2" opacity="0.5"/>
-<path d="M11 30 Q19 17 27 26 Q33 32 39 19" stroke="url(#gGold)" stroke-width="2.6" fill="none" stroke-dasharray="3 3" stroke-linecap="round"/>
-<circle cx="11" cy="30" r="3" fill="url(#gBlue)"/><circle cx="39" cy="19" r="3" fill="url(#gBlue)"/>
-<ellipse cx="16" cy="14" rx="9" ry="4" fill="url(#gShine)"/>
-</g></svg></div><h3>Diagnóstico Empresarial Integral</h3><p>Evaluación completa: procesos, tecnología, datos y estrategia, con hoja de ruta personalizada de mejoras.</p><button class="service-add-btn" onclick="toggleService(8,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-0"><div class="service-icon"><img src="icon-briefcase.png" alt="icon-briefcase" loading="lazy"></div><h3>Consultoría en Recuperación de Cartera</h3><p>Estrategias y procesos profesionales para mejorar la recuperación de deuda y optimizar el flujo de caja.</p><button class="service-add-btn" onclick="toggleService(0,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-1"><div class="service-icon"><img src="icon-growth.png" alt="icon-growth" loading="lazy"></div><h3>Analítica Empresarial & Dashboards</h3><p>Diseño de tableros ejecutivos y herramientas de BI para monitoreo estratégico en tiempo real.</p><button class="service-add-btn" onclick="toggleService(1,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-2"><div class="service-icon"><img src="icon-ai.png" alt="icon-ai" loading="lazy"></div><h3>Implementación de IA en Procesos</h3><p>Automatización inteligente y soluciones de inteligencia artificial adaptadas a las operaciones de su empresa.</p><button class="service-add-btn" onclick="toggleService(2,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-3"><div class="service-icon"><img src="icon-laptop.png" alt="icon-laptop" loading="lazy"></div><h3>Desarrollo Web Corporativo</h3><p>Diseño y desarrollo de sitios web modernos, funcionales y optimizados para generar confianza y conversiones.</p><button class="service-add-btn" onclick="toggleService(3,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-4"><div class="service-icon"><img src="icon-palette.png" alt="icon-palette" loading="lazy"></div><h3>Identidad Visual & Branding</h3><p>Creación de identidad corporativa, diseño de marca y activos visuales profesionales alineados a su posicionamiento.</p><button class="service-add-btn" onclick="toggleService(4,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-5"><div class="service-icon"><img src="icon-video.png" alt="icon-video" loading="lazy"></div><h3>Contenido Digital con IA</h3><p>Producción de videos promocionales, imágenes y contenido audiovisual generado con inteligencia artificial.</p><button class="service-add-btn" onclick="toggleService(5,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-6"><div class="service-icon"><img src="icon-cap.png" alt="icon-cap" loading="lazy"></div><h3>Capacitación & Desarrollo Empresarial</h3><p>Programas de formación en estrategia, analítica de datos e IA para equipos directivos y de gestión.</p><button class="service-add-btn" onclick="toggleService(6,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-7"><div class="service-icon"><img src="icon-music.png" alt="icon-music" loading="lazy"></div><h3>Branding Sonoro Corporativo</h3><p>Producción de música e identidad sonora personalizada para reforzar el posicionamiento de su marca.</p><button class="service-add-btn" onclick="toggleService(7,this)"><span>+</span> Agregar al pedido</button></div>
+    <div class="service-card reveal" id="svc-8"><div class="service-icon"><img src="icon-map.png" alt="icon-map" loading="lazy"></div><h3>Diagnóstico Empresarial Integral</h3><p>Evaluación completa: procesos, tecnología, datos y estrategia, con hoja de ruta personalizada de mejoras.</p><button class="service-add-btn" onclick="toggleService(8,this)"><span>+</span> Agregar al pedido</button></div>
   </div>
   <div class="order-bar" id="orderBar">
     <div class="order-bar-left">
@@ -868,59 +570,27 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
     </div>
     <div class="method-steps reveal">
       <div class="method-step">
-        <div class="step-circle"><span class="step-num">01</span><span class="step-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="20" cy="20" r="13.5" fill="url(#gWhite)"/>
-<circle cx="20" cy="20" r="9" fill="url(#gGold)"/>
-<line x1="29" y1="29" x2="42" y2="42" stroke="url(#gBlue)" stroke-width="5" stroke-linecap="round"/>
-<ellipse cx="15" cy="14" rx="6" ry="3" fill="url(#gShine)"/>
-</g></svg></span></div>
+        <div class="step-circle"><span class="step-num">01</span><span class="step-icon"><img src="icon-search.png" alt="icon-search" loading="lazy"></span></div>
         <h4>Diagnóstico</h4>
         <p>Análisis profundo de la situación actual: procesos, datos, tecnología y posición competitiva de su empresa.</p>
       </div>
       <div class="method-step">
-        <div class="step-circle"><span class="step-num">02</span><span class="step-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="28" width="9" height="14" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="19.5" y="17" width="9" height="25" rx="2.5" fill="url(#gBlue)"/>
-<rect x="33" y="8" width="9" height="34" rx="2.5" fill="url(#gGold)"/>
-<ellipse cx="24" cy="12" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></span></div>
+        <div class="step-circle"><span class="step-num">02</span><span class="step-icon"><img src="icon-chart.png" alt="icon-chart" loading="lazy"></span></div>
         <h4>Análisis</h4>
         <p>Identificación de brechas, oportunidades de mejora y priorización de iniciativas según impacto y viabilidad.</p>
       </div>
       <div class="method-step">
-        <div class="step-circle"><span class="step-num">03</span><span class="step-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="20" fill="url(#gWhite)"/>
-<circle cx="24" cy="24" r="14" fill="url(#gBlue)"/>
-<circle cx="24" cy="24" r="8" fill="url(#gWhite)"/>
-<circle cx="24" cy="24" r="4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="14" rx="12" ry="7" fill="url(#gShine)"/>
-</g></svg></span></div>
+        <div class="step-circle"><span class="step-num">03</span><span class="step-icon"><img src="icon-target.png" alt="icon-target" loading="lazy"></span></div>
         <h4>Estrategia</h4>
         <p>Diseño de la hoja de ruta estratégica con objetivos claros, métricas de éxito y plan de acción detallado.</p>
       </div>
       <div class="method-step">
-        <div class="step-circle"><span class="step-num">04</span><span class="step-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<g fill="url(#gBlue)">
-<circle cx="24" cy="24" r="14"/>
-<rect x="21" y="2" width="6" height="8" rx="1.5"/><rect x="21" y="38" width="6" height="8" rx="1.5"/>
-<rect x="2" y="21" width="8" height="6" rx="1.5"/><rect x="38" y="21" width="8" height="6" rx="1.5"/>
-<rect x="21" y="2" width="6" height="8" rx="1.5" transform="rotate(45 24 24)"/><rect x="21" y="38" width="6" height="8" rx="1.5" transform="rotate(45 24 24)"/>
-<rect x="2" y="21" width="8" height="6" rx="1.5" transform="rotate(45 24 24)"/><rect x="38" y="21" width="8" height="6" rx="1.5" transform="rotate(45 24 24)"/>
-</g>
-<circle cx="24" cy="24" r="7.5" fill="url(#gWhite)"/><circle cx="24" cy="24" r="4" fill="url(#gGold)"/>
-<ellipse cx="18" cy="16" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></span></div>
+        <div class="step-circle"><span class="step-num">04</span><span class="step-icon"><img src="icon-gear.png" alt="icon-gear" loading="lazy"></span></div>
         <h4>Implementación</h4>
         <p>Ejecución acompañada de las soluciones: tecnología, procesos, capacitación y gestión del cambio.</p>
       </div>
       <div class="method-step">
-        <div class="step-circle"><span class="step-num">05</span><span class="step-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="7" y="28" width="7" height="14" rx="2" fill="url(#gBlue2)"/>
-<rect x="18" y="20" width="7" height="22" rx="2" fill="url(#gBlue)"/>
-<rect x="29" y="11" width="7" height="31" rx="2" fill="url(#gGold)"/>
-<path d="M8 16 L20 8 L28 13 L41 3" stroke="url(#gGold)" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M32 3 H41 V12" stroke="url(#gGold)" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-</g></svg></span></div>
+        <div class="step-circle"><span class="step-num">05</span><span class="step-icon"><img src="icon-growth.png" alt="icon-growth" loading="lazy"></span></div>
         <h4>Resultados</h4>
         <p>Medición de impacto, ajustes de optimización y transferencia de conocimiento para la sostenibilidad interna.</p>
       </div>
@@ -937,38 +607,10 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
       <p>Más que un proveedor de servicios, somos su socio estratégico en la toma de decisiones y en la construcción de una empresa más eficiente y competitiva.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card reveal"><span class="why-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M18 7 C10 7 6 13 7 19 C3 21 3 30 8 32 C7 38 13 42 19 40 C21 43 27 43 29 40 C35 42 41 38 40 32 C45 30 45 21 41 19 C42 13 38 7 30 7 C28 5 20 5 18 7 Z" fill="url(#gBlue2)"/>
-<path d="M24 9 V39" stroke="#0a1f42" stroke-width="1.6" opacity="0.4"/>
-<path d="M14 15 Q18 20 14 24 Q18 28 15 34" stroke="#0a1f42" stroke-width="1.6" fill="none" opacity="0.4"/>
-<path d="M34 15 Q30 20 34 24 Q30 28 33 34" stroke="#0a1f42" stroke-width="1.6" fill="none" opacity="0.4"/>
-<circle cx="31" cy="13" r="2.6" fill="url(#gGold)"/>
-<ellipse cx="17" cy="14" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></span><h4>Decisiones basadas en datos reales</h4><p>Transformamos datos dispersos en inteligencia accionable. Sus decisiones estratégicas estarán respaldadas por análisis riguroso, no por intuición.</p></div>
-      <div class="why-card reveal"><span class="why-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<g fill="url(#gBlue)">
-<circle cx="24" cy="24" r="14"/>
-<rect x="21" y="2" width="6" height="8" rx="1.5"/><rect x="21" y="38" width="6" height="8" rx="1.5"/>
-<rect x="2" y="21" width="8" height="6" rx="1.5"/><rect x="38" y="21" width="8" height="6" rx="1.5"/>
-<rect x="21" y="2" width="6" height="8" rx="1.5" transform="rotate(45 24 24)"/><rect x="21" y="38" width="6" height="8" rx="1.5" transform="rotate(45 24 24)"/>
-<rect x="2" y="21" width="8" height="6" rx="1.5" transform="rotate(45 24 24)"/><rect x="38" y="21" width="8" height="6" rx="1.5" transform="rotate(45 24 24)"/>
-</g>
-<circle cx="24" cy="24" r="7.5" fill="url(#gWhite)"/><circle cx="24" cy="24" r="4" fill="url(#gGold)"/>
-<ellipse cx="18" cy="16" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></span><h4>Automatización que libera talento</h4><p>Identificamos y automatizamos los procesos de bajo valor para que su equipo enfoque su energía donde realmente importa: en el crecimiento del negocio.</p></div>
-      <div class="why-card reveal"><span class="why-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 3 C31 10 33 19 30 27 L18 27 C15 19 17 10 24 3 Z" fill="url(#gWhite)"/>
-<circle cx="24" cy="16" r="4" fill="url(#gBlue)"/>
-<path d="M18 22 L8 32 L16 30 Z" fill="url(#gGold)"/><path d="M30 22 L40 32 L32 30 Z" fill="url(#gGold)"/>
-<path d="M19 27 H29 L27 35 H21 Z" fill="url(#gGray)"/>
-<path d="M20 35 L24 45 L28 35 Z" fill="url(#gGold)"/>
-<ellipse cx="19" cy="9" rx="6" ry="4" fill="url(#gShine)"/>
-</g></svg></span><h4>Crecimiento empresarial acelerado</h4><p>Cada intervención está diseñada para generar impacto tangible: mayor eficiencia operativa, reducción de costos y expansión de capacidades competitivas.</p></div>
-      <div class="why-card reveal"><span class="why-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="18" r="14" fill="url(#gGold)"/>
-<rect x="18" y="29" width="12" height="8" rx="2.4" fill="url(#gGray)"/><rect x="18" y="38" width="12" height="3.4" rx="1.6" fill="#3d4a5c"/>
-<ellipse cx="18" cy="12" rx="7" ry="4" fill="url(#gShine)"/>
-</g></svg></span><h4>Optimización de recursos estratégicos</h4><p>Con una visión sistémica del negocio, identificamos dónde se pierde valor y rediseñamos la asignación de recursos para maximizar el retorno.</p></div>
+      <div class="why-card reveal"><span class="why-icon"><img src="icon-brain.png" alt="icon-brain" loading="lazy"></span><h4>Decisiones basadas en datos reales</h4><p>Transformamos datos dispersos en inteligencia accionable. Sus decisiones estratégicas estarán respaldadas por análisis riguroso, no por intuición.</p></div>
+      <div class="why-card reveal"><span class="why-icon"><img src="icon-gear.png" alt="icon-gear" loading="lazy"></span><h4>Automatización que libera talento</h4><p>Identificamos y automatizamos los procesos de bajo valor para que su equipo enfoque su energía donde realmente importa: en el crecimiento del negocio.</p></div>
+      <div class="why-card reveal"><span class="why-icon"><img src="icon-rocket.png" alt="icon-rocket" loading="lazy"></span><h4>Crecimiento empresarial acelerado</h4><p>Cada intervención está diseñada para generar impacto tangible: mayor eficiencia operativa, reducción de costos y expansión de capacidades competitivas.</p></div>
+      <div class="why-card reveal"><span class="why-icon"><img src="icon-bulb.png" alt="icon-bulb" loading="lazy"></span><h4>Optimización de recursos estratégicos</h4><p>Con una visión sistémica del negocio, identificamos dónde se pierde valor y rediseñamos la asignación de recursos para maximizar el retorno.</p></div>
     </div>
     <div class="why-differentiators reveal">
       <div class="diff-item"><div class="diff-num">01</div><div><h5>Formación internacional de primer nivel</h5><p>MBA en EUDE Business School (Madrid) y Máster en BI & Big Data. El rigor académico al servicio de sus decisiones.</p></div></div>
@@ -1117,43 +759,11 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
     <p class="consultant-bio">Especialista en estrategia empresarial, inteligencia de negocios y transformación digital con formación ejecutiva internacional. Ha desarrollado su carrera en el cruce entre la gestión empresarial y la tecnología avanzada, liderando proyectos de analítica de datos, implementación de IA y modernización de procesos en empresas y emprendimientos de la región. Su metodología integra el pensamiento estratégico del MBA con la aplicación práctica de herramientas de Big Data, Business Intelligence e Inteligencia Artificial.</p>
     <div class="credentials-title">Formación Académica Internacional</div>
     <div class="credentials-grid">
-      <div class="cred-card gold-border"><div class="cred-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="5" y="34" width="38" height="4.5" fill="url(#gNavy)"/>
-<rect x="9" y="18" width="4.5" height="16" fill="url(#gBlue)"/><rect x="17.5" y="18" width="4.5" height="16" fill="url(#gBlue)"/>
-<rect x="26" y="18" width="4.5" height="16" fill="url(#gBlue)"/><rect x="34.5" y="18" width="4.5" height="16" fill="url(#gBlue)"/>
-<path d="M3 18 L24 5 L45 18 Z" fill="url(#gGold)"/>
-<ellipse cx="18" cy="10" rx="10" ry="3" fill="url(#gShine)"/>
-</g></svg></div><div><h4>MBA — Master en Administración y Dirección de Empresas</h4><p>EUDE Business School · Madrid, España. Formación ejecutiva de primer nivel con enfoque en estrategia, dirección y liderazgo empresarial internacional.</p></div></div>
-      <div class="cred-card gold-border"><div class="cred-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<circle cx="24" cy="24" r="19" fill="url(#gBlue)"/>
-<ellipse cx="24" cy="24" rx="8" ry="19" fill="none" stroke="#ffffff" stroke-width="1.6" opacity="0.8"/>
-<line x1="5" y1="24" x2="43" y2="24" stroke="#ffffff" stroke-width="1.6" opacity="0.8"/>
-<path d="M7 15 Q24 24 41 15" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.65"/>
-<path d="M7 33 Q24 24 41 33" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.65"/>
-<circle cx="33" cy="13" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="16" cy="13" rx="9" ry="5" fill="url(#gShine)"/>
-</g></svg></div><div><h4>2 Seminarios Internacionales — Inteligencia Artificial</h4><p>Madrid, España. IA aplicada a los modelos de negocio: automatización, decisiones algorítmicas y estrategia competitiva en la era digital.</p></div></div>
-      <div class="cred-card blue-border"><div class="cred-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="6" y="28" width="9" height="14" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="19.5" y="17" width="9" height="25" rx="2.5" fill="url(#gBlue)"/>
-<rect x="33" y="8" width="9" height="34" rx="2.5" fill="url(#gGold)"/>
-<ellipse cx="24" cy="12" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></div><div><h4>Máster en Sistemas de Información</h4><p>Mención en Business Intelligence & Big Data Analytics. Análisis avanzado de datos, modelado de información y toma de decisiones orientada a resultados.</p></div></div>
-      <div class="cred-card blue-border"><div class="cred-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 7 L45 17 L24 27 L3 17 Z" fill="url(#gNavy)"/>
-<path d="M13 20 V30 C13 33.5 18.5 37 24 37 C29.5 37 35 33.5 35 30 V20" fill="none" stroke="url(#gBlue)" stroke-width="3"/>
-<line x1="41" y1="17" x2="41" y2="31" stroke="url(#gGold)" stroke-width="2.4" stroke-linecap="round"/><circle cx="41" cy="33" r="2.8" fill="url(#gGold)"/>
-<ellipse cx="18" cy="13" rx="10" ry="3.4" fill="url(#gShine)"/>
-</g></svg></div><div><h4>Licenciado en Comunicación Social</h4><p>Formación en comunicación estratégica y organizacional, aplicada en consultoría de marca, narrativa corporativa y gestión del cambio.</p></div></div>
-      <div class="cred-card"><div class="cred-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="4" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/><rect x="39" y="21" width="5" height="9" rx="2.5" fill="url(#gBlue2)"/>
-<rect x="10" y="13" width="28" height="24" rx="9" fill="url(#gBlue)"/>
-<circle cx="19" cy="25" r="3.6" fill="url(#gWhite)"/><circle cx="29" cy="25" r="3.6" fill="url(#gWhite)"/>
-<rect x="18" y="31.5" width="12" height="3" rx="1.5" fill="url(#gGold)"/>
-<line x1="24" y1="13" x2="24" y2="6" stroke="url(#gGold)" stroke-width="3" stroke-linecap="round"/>
-<circle cx="24" cy="5.5" r="3.4" fill="url(#gGold)"/>
-<ellipse cx="17" cy="18" rx="9" ry="5" fill="url(#gShine)"/>
-</g></svg></div><div><h4>Especialista en IA & Big Data Empresarial</h4><p>Implementación práctica de inteligencia artificial y analítica avanzada en procesos empresariales críticos.</p></div></div>
+      <div class="cred-card gold-border"><div class="cred-icon"><img src="icon-institution.png" alt="icon-institution" loading="lazy"></div><div><h4>MBA — Master en Administración y Dirección de Empresas</h4><p>EUDE Business School · Madrid, España. Formación ejecutiva de primer nivel con enfoque en estrategia, dirección y liderazgo empresarial internacional.</p></div></div>
+      <div class="cred-card gold-border"><div class="cred-icon"><img src="icon-globe.png" alt="icon-globe" loading="lazy"></div><div><h4>2 Seminarios Internacionales — Inteligencia Artificial</h4><p>Madrid, España. IA aplicada a los modelos de negocio: automatización, decisiones algorítmicas y estrategia competitiva en la era digital.</p></div></div>
+      <div class="cred-card blue-border"><div class="cred-icon"><img src="icon-chart.png" alt="icon-chart" loading="lazy"></div><div><h4>Máster en Sistemas de Información</h4><p>Mención en Business Intelligence & Big Data Analytics. Análisis avanzado de datos, modelado de información y toma de decisiones orientada a resultados.</p></div></div>
+      <div class="cred-card blue-border"><div class="cred-icon"><img src="icon-cap.png" alt="icon-cap" loading="lazy"></div><div><h4>Licenciado en Comunicación Social</h4><p>Formación en comunicación estratégica y organizacional, aplicada en consultoría de marca, narrativa corporativa y gestión del cambio.</p></div></div>
+      <div class="cred-card"><div class="cred-icon"><img src="icon-ai.png" alt="icon-ai" loading="lazy"></div><div><h4>Especialista en IA & Big Data Empresarial</h4><p>Implementación práctica de inteligencia artificial y analítica avanzada en procesos empresariales críticos.</p></div></div>
     </div>
     <div class="consultant-tags">
       <span class="tag gold-tag">MBA · EUDE Business School</span>
@@ -1176,34 +786,21 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
       <h2 class="section-title">Solicite Gratis su diagnóstico empresarial</h2>
       <p>El diagnóstico inicial es el punto de partida de toda transformación exitosa. Conversemos sobre los desafíos de su empresa y definamos juntos la hoja de ruta más adecuada.</p>
       <div class="contact-detail">
-        <div class="contact-detail-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="13" y="3" width="22" height="42" rx="5" fill="url(#gBlue)"/>
-<rect x="16.5" y="9" width="15" height="27" rx="1.4" fill="url(#gNavy)"/>
-<circle cx="24" cy="40" r="2.4" fill="url(#gGold)"/>
-<ellipse cx="19" cy="12" rx="6" ry="3" fill="url(#gShine)"/>
-</g></svg></div>
+        <div class="contact-detail-icon"><img src="icon-phone.png" alt="icon-phone" loading="lazy"></div>
         <div class="contact-detail-text">
           <small>WhatsApp / Línea directa</small>
           <a href="https://wa.me/593989938910">+593 98 993 8910</a>
         </div>
       </div>
       <div class="contact-detail">
-        <div class="contact-detail-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<rect x="4" y="10" width="40" height="28" rx="4" fill="url(#gBlue)"/>
-<path d="M4 12 L24 28 L44 12" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-<ellipse cx="14" cy="16" rx="8" ry="4" fill="url(#gShine)"/>
-</g></svg></div>
+        <div class="contact-detail-icon"><img src="icon-mail.png" alt="icon-mail" loading="lazy"></div>
         <div class="contact-detail-text">
           <small>Correo corporativo</small>
           <a href="mailto:info@elhyai.com">info@elhyai.com</a>
         </div>
       </div>
       <div class="contact-detail">
-        <div class="contact-detail-icon"><svg viewBox="0 0 48 48"><g filter="url(#softShadow)">
-<path d="M24 3 C14 3 7 11 7 20 C7 32 24 45 24 45 C24 45 41 32 41 20 C41 11 34 3 24 3 Z" fill="url(#gGold)"/>
-<circle cx="24" cy="20" r="8.5" fill="url(#gWhite)"/><circle cx="24" cy="20" r="4.4" fill="url(#gBlue)"/>
-<ellipse cx="18" cy="12" rx="7" ry="4" fill="url(#gShine)"/>
-</g></svg></div>
+        <div class="contact-detail-icon"><img src="icon-pin.png" alt="icon-pin" loading="lazy"></div>
         <div class="contact-detail-text">
           <small>Base de operaciones</small>
           <span>Milagro, Guayas · Ecuador</span>
