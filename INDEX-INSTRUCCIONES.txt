@@ -1,0 +1,1 @@
+Sube el archivo index.html actualizado (iconos SVG profesionales) sobreescribiendo index.html en la raiz del repo. El archivo listo esta en el chat.
