@@ -303,13 +303,16 @@ nav { position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex
 .consultant-bio { font-size:0.97rem;line-height:1.88;color:rgba(255,255,255,0.55);margin-bottom:2rem;font-weight:300; }
 .credentials-title { font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.25rem; }
 .credentials-grid { display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin-bottom:2rem; }
-.cred-card { background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.1rem 1.2rem;display:flex;gap:0.85rem;align-items:flex-start;transition:border-color 0.2s; }
+.cred-card { background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:0;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.2s; }
+.cred-card > div:last-child{padding:1.1rem 1.2rem;}
 .cred-card:hover { border-color:rgba(29,95,196,0.4); }
-.cred-card.gold-border { border-left:3px solid var(--gold); }
-.cred-card.blue-border { border-left:3px solid var(--accent-light); }
+.cred-card.gold-border { border-top:3px solid var(--gold); }
+.cred-card.blue-border { border-top:3px solid var(--accent-light); }
 .cred-icon { font-size:1.3rem;flex-shrink:0;margin-top:0.1rem; }
-.cred-card h4 { font-size:0.8rem;font-weight:700;color:white;margin-bottom:0.2rem;line-height:1.35; }
-.cred-card p { font-size:0.75rem;color:rgba(255,255,255,0.42);line-height:1.45; }
+.cred-card h4 { font-size:0.9rem;font-weight:700;color:white;margin-bottom:0.35rem;line-height:1.35; }
+.cred-card p { font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5; }
+.cred-icon{width:100%;margin-bottom:0;border-radius:0;background:rgba(0,0,0,0.15);}
+.cred-icon img{width:100%;height:140px;object-fit:cover;display:block;border-radius:0;}
 .consultant-tags { display:flex;flex-wrap:wrap;gap:0.55rem; }
 .tag { background:rgba(29,95,196,0.12);border:1px solid rgba(29,95,196,0.25);color:rgba(100,160,255,0.9);font-size:0.76rem;font-weight:600;padding:0.28rem 0.75rem;border-radius:100px; }
 .tag.gold-tag { background:rgba(200,151,58,0.12);border-color:rgba(200,151,58,0.3);color:var(--gold-light); }
@@ -381,8 +384,8 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
   .hero-stats{flex-direction:column;gap:1.5rem;align-items:center;} .method-steps{grid-template-columns:1fr;}
 }
 
-.pillar-icon,.area-icon,.service-icon,.why-icon,.cred-icon{width:100%;border-radius:10px;overflow:hidden;margin-bottom:1rem;background:rgba(0,0,0,0.04);}
-.pillar-icon img,.area-icon img,.service-icon img,.why-icon img,.cred-icon img{width:100%;height:110px;object-fit:cover;display:block;border-radius:10px;}
+.pillar-icon,.area-icon,.service-icon,.why-icon{width:100%;border-radius:10px;overflow:hidden;margin-bottom:1rem;background:rgba(0,0,0,0.04);}
+.pillar-icon img,.area-icon img,.service-icon img,.why-icon img{width:100%;height:110px;object-fit:cover;display:block;border-radius:10px;}
 .step-icon{display:flex;align-items:center;}
 .step-icon img{width:26px;height:26px;display:block;border-radius:4px;object-fit:cover;}
 .service-icon{height:auto;background:none;border:none;padding:0;}
