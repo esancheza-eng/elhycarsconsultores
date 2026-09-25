@@ -817,6 +817,7 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
 .cert-date{font-size:0.72rem;color:var(--gray);}
 .cert-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1.2;}
 .cert-platform{font-size:0.8rem;color:var(--gray-text);font-weight:300;}
+.cert-desc{font-size:0.86rem;line-height:1.6;color:var(--gray-text);margin:0.15rem 0 0.1rem;padding-left:0.75rem;border-left:2px solid var(--gold-light);}
 .cert-skills{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.2rem;}
 .cert-skills span{font-size:0.66rem;font-weight:600;color:var(--accent);background:rgba(29,95,196,0.08);padding:0.25rem 0.55rem;border-radius:4px;}
 .cert-actions{display:flex;gap:0.6rem;margin-top:auto;padding-top:0.9rem;}
@@ -864,10 +865,12 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
    - imagen: suba la imagen a la carpeta "certificados/" del repo
    - fecha:  formato AAAA-MM-DD (se ordena automáticamente, la más reciente primero)
    - categoria: se usa para los botones de filtro
+   - descripcion: una frase corta (15-20 palabras) sobre el valor para el cliente
    ============================================================ */
 const CERTIFICACIONES = [
   {
     titulo: "Generative AI for Leaders",
+    descripcion: "IA generativa aplicada a la toma de decisiones y al liderazgo de equipos en la transformación digital.",
     emisor: "Vanderbilt University",
     plataforma: "Curso en línea autorizado por Vanderbilt University · Coursera",
     fecha: "2026-05-24",
@@ -878,6 +881,7 @@ const CERTIFICACIONES = [
   },
   {
     titulo: "Generative AI and Prompt Engineering Essentials",
+    descripcion: "Técnicas de prompt engineering para obtener resultados precisos y confiables de herramientas de IA generativa.",
     emisor: "Edureka",
     plataforma: "Curso en línea autorizado por Edureka · Coursera",
     fecha: "2026-05-30",
@@ -888,6 +892,7 @@ const CERTIFICACIONES = [
   },
   {
     titulo: "Foundations of Cybersecurity",
+    descripcion: "Principios de seguridad de la información para proteger los datos y sistemas que implemento a mis clientes.",
     emisor: "Google",
     plataforma: "Curso en línea autorizado por Google · Coursera",
     fecha: "2026-06-08",
@@ -898,6 +903,7 @@ const CERTIFICACIONES = [
   },
   {
     titulo: "Sesenta años de inteligencia artificial",
+    descripcion: "Visión histórica y crítica de la IA para distinguir tendencias reales de modas pasajeras.",
     emisor: "UNAM",
     plataforma: "Universidad Nacional Autónoma de México · Coursera · 5 horas",
     fecha: "2026-07-22",
@@ -908,6 +914,7 @@ const CERTIFICACIONES = [
   },
   {
     titulo: "AI Fundamentals",
+    descripcion: "Bases sólidas de inteligencia artificial para identificar dónde la IA genera valor real en una empresa.",
     emisor: "Google",
     plataforma: "Curso en línea autorizado por Google · Coursera",
     fecha: "2026-08-10",
@@ -918,6 +925,7 @@ const CERTIFICACIONES = [
   },
   {
     titulo: "Diseño instruccional para el aprendizaje activo",
+    descripcion: "Diseño capacitaciones y cursos con metodologías de aprendizaje activo para equipos que aprenden haciendo.",
     emisor: "Tecnológico de Monterrey",
     plataforma: "Curso en línea autorizado por el Tec de Monterrey · Coursera",
     fecha: "2026-09-22",
@@ -928,6 +936,7 @@ const CERTIFICACIONES = [
   },
   {
     titulo: "AI for App Building",
+    descripcion: "Uso IA para diseñar y construir aplicaciones web a medida, acelerando el desarrollo de herramientas para su negocio.",
     emisor: "Google",
     plataforma: "Curso en línea autorizado por Google · Coursera",
     fecha: "2026-09-25",
@@ -958,6 +967,7 @@ const CERTIFICACIONES = [
           <div class="cert-meta"><span class="cert-issuer">${esc(c.emisor)}</span><span class="cert-date">${fmt(c.fecha)}</span></div>
           <h3 class="cert-title">${esc(c.titulo)}</h3>
           <div class="cert-platform">${esc(c.plataforma)}</div>
+          ${c.descripcion?`<p class="cert-desc">${esc(c.descripcion)}</p>`:""}
           <div class="cert-skills">${(c.habilidades||[]).map(h=>`<span>${esc(h)}</span>`).join("")}</div>
           <div class="cert-actions">
             <button class="cert-btn-view" data-img="${esc(c.imagen)}" data-alt="${esc(c.titulo)}">Ver certificado</button>
