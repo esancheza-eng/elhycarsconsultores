@@ -833,6 +833,27 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
 .cert-modal-close{position:absolute;top:1rem;right:1.2rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:white;width:44px;height:44px;border-radius:50%;font-size:1.4rem;cursor:pointer;}
 .cert-modal-close:hover{background:rgba(255,255,255,0.2);}
 @media(max-width:600px){.certs{padding:5rem 5%;}.certs-grid{grid-template-columns:1fr;}.cert-thumb .zoom{opacity:1;}}
+/* INSIGNIAS CREDLY */
+.badges{margin-top:4rem;background:white;border:1px solid rgba(15,32,64,0.08);border-radius:18px;padding:2.4rem 2rem 2.2rem;box-shadow:0 6px 24px rgba(8,15,30,0.06);}
+.badges-head{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;margin-bottom:2rem;}
+.badges-head-txt h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--navy);line-height:1.15;}
+.badges-head-txt p{font-size:0.86rem;color:var(--gray-text);font-weight:300;margin-top:0.3rem;max-width:520px;line-height:1.6;}
+.badges-by{display:flex;align-items:center;gap:0.6rem;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);}
+.badges-by img{height:44px;width:auto;display:block;}
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,260px));justify-content:center;gap:1.4rem;}
+.badge-card{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:inherit;border:1px solid rgba(15,32,64,0.1);border-radius:16px;padding:1.6rem 1.2rem 1.3rem;background:linear-gradient(180deg,#f7f9fd 0%,#fff 60%);transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;}
+.badge-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(8,15,30,0.12);border-color:rgba(29,95,196,0.35);}
+.badge-img{width:128px;height:128px;margin-bottom:1rem;transition:transform 0.4s;}
+.badge-card:hover .badge-img{transform:rotate(-4deg) scale(1.05);}
+.badge-img img,.badge-img svg{width:100%;height:100%;display:block;object-fit:contain;}
+.badge-name{font-weight:600;font-size:1rem;color:var(--navy);line-height:1.3;}
+.badge-org{font-size:0.78rem;color:var(--gray-text);margin-top:0.2rem;}
+.badge-date{font-size:0.72rem;color:var(--gray);margin-top:0.7rem;}
+.badge-verified{display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.8rem;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1a8f55;background:rgba(26,143,85,0.09);padding:0.3rem 0.65rem;border-radius:999px;}
+.badges-cta{display:flex;justify-content:center;margin-top:1.8rem;}
+.badges-cta a{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.8rem;font-weight:600;color:var(--navy);text-decoration:none;border:1px solid rgba(15,32,64,0.2);padding:0.7rem 1.4rem;border-radius:8px;transition:all 0.2s;}
+.badges-cta a:hover{border-color:#FF6B00;color:#FF6B00;}
+@media(max-width:600px){.badges{padding:1.8rem 1.2rem;}.badges-head{flex-direction:column;align-items:flex-start;}}
 </style>
 <section class="certs" id="certificaciones">
   <div class="certs-inner">
@@ -852,6 +873,20 @@ footer { background:var(--navy);padding:3rem 5%;border-top:1px solid rgba(29,95,
     <div class="certs-filters" id="certFilters"></div>
     <div class="certs-grid" id="certsGrid"></div>
     <div class="certs-count" id="certsCount"></div>
+
+    <!-- INSIGNIAS DIGITALES CREDLY -->
+    <div class="badges reveal" id="insignias">
+      <div class="badges-head">
+        <div class="badges-head-txt">
+          <div class="section-label">Insignias Digitales</div>
+          <h3>Credenciales verificadas en Credly</h3>
+          <p>Insignias digitales emitidas por Google a través de Coursera, verificables públicamente en la plataforma Credly by Pearson.</p>
+        </div>
+        <div class="badges-by"><span>Verificado en</span><img src="certificados/logo-credly.png" alt="Credly by Pearson"></div>
+      </div>
+      <div class="badges-grid" id="badgesGrid"></div>
+      <div class="badges-cta"><a id="badgesProfile" href="#" target="_blank" rel="noopener">Ver cartera completa en Credly ↗</a></div>
+    </div>
   </div>
 </section>
 <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificado">
@@ -986,6 +1021,52 @@ const CERTIFICACIONES = [
   modal.addEventListener("click",e=>{if(e.target===modal)cerrar();});
   document.addEventListener("keydown",e=>{if(e.key==="Escape")cerrar();});
   render();
+})();
+</script>
+<script>
+/* ============================================================
+   INSIGNIAS CREDLY — para agregar una nueva, copie un bloque { ... }
+   - enlace: en Credly abra la insignia > "Compartir" > copie el enlace público
+             (si lo deja vacío, se abre su perfil de Credly)
+   - imagen: opcional. Clic derecho sobre la insignia en Credly >
+             "Copiar dirección de imagen" (https://images.credly.com/...)
+             o súbala a "certificados/". Si la deja vacía se dibuja un emblema.
+   - fecha:  AAAA-MM-DD (la más reciente aparece primero)
+   ============================================================ */
+const CREDLY_PERFIL = "https://www.credly.com/users/elhy-christian-sanchez-arreaga";
+const INSIGNIAS = [
+  { titulo: "Google AI for App Building", emisor: "Coursera · Google", tipo: "Course Completion", fecha: "2026-09-25", imagen: "", enlace: "" },
+  { titulo: "Google AI Fundamentals",     emisor: "Coursera · Google", tipo: "Course Completion", fecha: "2026-08-11", imagen: "", enlace: "" },
+];
+
+(function(){
+  const MESES=["ene","feb","mar","abr","may","jun","jul","ago","sept","oct","nov","dic"];
+  const fmt=d=>{const [y,m,dd]=d.split("-");return (+dd)+" "+MESES[+m-1]+" "+y;};
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const emblema=(t,tipo,i)=>{
+    const nombre=t.replace(/^Google\s+/,"");
+    const pal=nombre.split(" "),l1=[],l2=[];
+    pal.forEach(w=>((l1.join(" ")+" "+w).trim().length<=13&&!l2.length?l1:l2).push(w));
+    const id="bg"+i;
+    return `<svg viewBox="0 0 128 128" aria-hidden="true"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fb4ff"/><stop offset="1" stop-color="#1d5fc4"/></linearGradient></defs>
+      <path d="M64 8 L118 12 L110 44 A52 52 0 1 1 64 12 Z" fill="url(#${id})"/>
+      <circle cx="64" cy="66" r="48" fill="#eef3ff" stroke="url(#${id})" stroke-width="5"/>
+      <path d="M64 30 l3.2 7.8 7.8 3.2 -7.8 3.2 -3.2 7.8 -3.2 -7.8 -7.8 -3.2 7.8 -3.2z" fill="#1d5fc4"/>
+      <text x="64" y="${l2.length?66:72}" text-anchor="middle" font-family="Outfit,sans-serif" font-size="10.5" font-weight="600" fill="#0f2040">${esc(l1.join(" "))}</text>
+      ${l2.length?`<text x="64" y="78" text-anchor="middle" font-family="Outfit,sans-serif" font-size="10.5" font-weight="600" fill="#0f2040">${esc(l2.join(" "))}</text>`:""}
+      <line x1="46" y1="86" x2="82" y2="86" stroke="#9aa8bd" stroke-width="0.8"/>
+      <text x="64" y="96" text-anchor="middle" font-family="Outfit,sans-serif" font-size="5" letter-spacing="0.4" fill="#3d4a5c">${esc(tipo.toUpperCase())}</text></svg>`;
+  };
+  const lista=[...INSIGNIAS].sort((a,b)=>b.fecha.localeCompare(a.fecha));
+  document.getElementById("badgesProfile").href=CREDLY_PERFIL;
+  document.getElementById("badgesGrid").innerHTML=lista.map((b,i)=>`
+    <a class="badge-card" href="${esc(b.enlace||CREDLY_PERFIL)}" target="_blank" rel="noopener" title="Verificar en Credly">
+      <div class="badge-img">${b.imagen?`<img src="${esc(b.imagen)}" alt="Insignia ${esc(b.titulo)}" loading="lazy">`:emblema(b.titulo,b.tipo,i)}</div>
+      <div class="badge-name">${esc(b.titulo)}</div>
+      <div class="badge-org">${esc(b.emisor)}</div>
+      <div class="badge-date">Emitido ${fmt(b.fecha)}</div>
+      <span class="badge-verified">✓ Verificable</span>
+    </a>`).join("");
 })();
 </script>
 <!-- FIN CERTIFICACIONES -->
